@@ -1,71 +1,156 @@
-# Practica de Xarxes 2025
+# **Project Name: Act1-XX-2025**
 
-Repositori amb exemples per la pràctica de Xarxes 2025 / UdL.
+## **Project Overview**
 
+This repository is for collaborative development in **Act1-XX-2025**. Each team member has their own branch for working on their part of the project. Follow the instructions below to ensure smooth collaboration.
 
+## **Getting Started**
 
-# Developing with poetry
+### **1. Clone the Repository**
 
-If you have poetry installed on your machine (I recommend using it with pyenv to have recent python versions without affecting the system),
-you can get the code (checkout from git or unzip the file).
+If you haven't already cloned the repository, do so with:
 
-## Update dependencies
+```sh
+git clone https://github.com/euhean/Act1-XX-2025.git
+cd Act1-XX-2025
+```
 
-Inside the main directory:
+### **2. Check Remote Repository and Status**
 
-poetry sync 
+To verify the configured remote repositories:
 
-This will update the dependencies and install the libraries and this package.
+```sh
+git remote -v
+```
 
+To check the current branch status:
 
-## Run python or code
+```sh
+git status
+```
 
-You can run with the virtual environment with poetry:
+### **3. Fetch the Latest Updates**
 
-poetry run <command>
+Before starting any work, always update your local repository:
 
-For example:
+```sh
+git fetch origin
+```
 
-poetry run python 
+### **4. Switch to Your Assigned Branch**
 
-Will run a python installment with the libraries you have added (click, loguru, Pillow, etc.)
+Each classmate should work on their **own branch**. Replace `your-branch-name` with your assigned name:
 
-Or, as it is configured the sample of code:
+```sh
+git checkout your-branch-name
+```
 
-poetry run xarxes2025
+If the branch doesn’t exist locally yet, create it:
 
-Will run my code. 
+```sh
+git checkout -b your-branch-name origin/your-branch-name
+```
 
-If you have to add libraries, you can use:
+### **5. Make Changes and Save Your Work**
 
-poetry add <libname>
+After making your changes, add and commit them:
 
-All libraries you add, ask first.
+```sh
+git add .
+git commit -m "Describe your changes here"
+```
 
+### **6. Push Your Changes to GitHub**
 
-# Code
+Push your updates to your branch:
 
-You have, in src/*py all the code. 
+```sh
+git push origin your-branch-name
+```
 
-There you have:
+### **7. Delete Your Branch (If No Longer Needed)**
 
-- cli.py  - Code to start server or client. Processes command line arguments with click.
-- server.py - Code for the server.
-- client.py - Code for the client, includes a minimal UI in TK. 
-- udpdatagram.py - Code to create an RTP datagram. Has missing code (gives error). You have to finish it.
-- videoprocessor.py - Code to process a videofile and encode it as a frame image. To be used for the project.
+Once you have completed your work and no longer need your branch:
 
+```sh
+git branch -d your-branch-name
+```
 
+To remove it from GitHub as well:
 
+```sh
+git push origin --delete your-branch-name
+```
 
-# MAC OS/X Special considerations
+## **Poetry & Virtual Environment Setup (Fedora)**
 
-Weirdly enough, Mac OS/X has a limit for UDP datagrams of:
+To work with dependencies and the virtual environment, follow these steps:
 
-9216
+### **1. Install Poetry**
 
-Solve it with:
+If Poetry is not installed, run:
 
-sudo sysctl -w net.inet.udp.maxdgram=65535
+```sh
+curl -sSL https://install.python-poetry.org | python3 -
+```
 
-This is a temporary fix, next reboot, solve it again.
+### **2. Add Poetry to Your PATH (Fedora)**
+
+Ensure Poetry is added to your PATH by adding the following to your shell configuration file (`~/.bashrc` or `~/.bash_profile`):
+
+```sh
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+Then, apply the changes:
+
+```sh
+source ~/.bashrc  # or source ~/.bash_profile
+```
+
+### **3. Set Up the Virtual Environment and Install Dependencies**
+
+Navigate to the project directory and install dependencies:
+
+```sh
+poetry install
+```
+
+If dependencies are missing or out of sync, run:
+
+```sh
+poetry update
+```
+
+### **4. Activate the Virtual Environment**
+
+Activate the environment manually:
+
+```sh
+source $(poetry env info --path)/bin/activate
+```
+
+### **5. Add New Dependencies**
+
+If you need to install a new package:
+
+```sh
+poetry add package-name
+```
+
+### **6. Exit the Virtual Environment**
+
+To deactivate the environment:
+
+```sh
+deactivate
+```
+
+## **Need Help?**
+
+If you face any issues, ask in the team chat or check GitHub documentation: [GitHub Docs](https://docs.github.com/)
+
+---
+
+Happy coding! 🚀
+
