@@ -18,7 +18,7 @@ class Client(object):
         :param port: The port to connect to.
         :param filename: The filename to ask for to connect to.
         """
-        logger.debug(f"Client created ")
+        logger.debug(f"Client created 1")
         self.server_port = server_port
         self.create_ui()
         
