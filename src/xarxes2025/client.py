@@ -11,20 +11,16 @@ from PIL import Image, ImageTk
 import io
 
 class Client(object):
-    def __init__(self, port):       
+    def __init__(self, port):    
         """
         Initialize a new VideoStreaming client.
 
         :param port: The port to connect to.
         :param filename: The filename to ask for to connect to.
         """
-
-        
-    def __init__(self, server_port, filename):
         logger.debug(f"Client created ")
         self.server_port = server_port
         self.create_ui()
-
         
     def create_ui(self):
         """
