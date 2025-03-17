@@ -1,0 +1,38 @@
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore virtual environment folders (Poetry's default location is in the project directory)
+venv/
+.env/
+.Poetry/
+
+# Ignore Poetry lock file (if you don't want to track changes in the lock file)
+poetry.lock
+
+# Ignore Poetry's cache directory
+.poetry/
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store       # macOS
+Thumbs.db       # Windows
+
+# Ignore pytest cache and coverage reports
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+
+# Ignore logs
+*.log
+
+# Ignore temporary or backup files
+*~
+*.swp
