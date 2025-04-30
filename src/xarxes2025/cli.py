@@ -65,6 +65,21 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     show_default=True,
     type=int
 )
+@click.option(
+    "-h",
+    "--host",
+    help="IP Address for RTSP server to connect (TCP)",
+    default=4321,
+    show_default=True,
+)
+@click.option(
+    "-u",
+    "--udp-port",
+    help="RTP port (UCP) Client",
+    default=4321,
+    show_default=True,
+    type=int
+)
 def server(ctx, port):
     """
     Start an RTSP server streaming video.
@@ -88,6 +103,21 @@ def server(ctx, port):
     "-p",
     "--port",
     help="RTSP port (TCP)",
+    default=4321,
+    show_default=True,
+    type=int
+)
+@click.option(
+    "-h",
+    "--host",
+    help="IP Address for RTSP server to connect (TCP)",
+    default=4321,
+    show_default=True,
+)
+@click.option(
+    "-u",
+    "--udp-port",
+    help="RTP port (UCP) Client",
     default=4321,
     show_default=True,
     type=int

@@ -2,7 +2,6 @@ import cv2
 from loguru import logger
 
 
-
 class VideoProcessor(object):
 
     ready = False
@@ -53,13 +52,10 @@ class VideoProcessor(object):
             logger.error(f"Cannot encode frame {self.frame_num}")
             raise IOError
 
-        jpeg_bytes = encoded_frame.tobytes() # Get the bytes
+        jpeg_bytes = encoded_frame.tobytes()
 
         data = jpeg_bytes
         return data
         
     def get_frame_number(self):
-    """Return the current frame number being processed."""
-
         return self.frame_num
-

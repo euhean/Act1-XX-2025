@@ -12,32 +12,33 @@ class UDPDatagram:
         """Encode the RTP packet with header fields and payload."""
         header = bytearray(self.HEADER_SIZE)
 
+        timestamp: int = int(time())
+        ssrc: int = 0
+
         version = 2
         padding = 0
         extension = 0
         cc = 0
         marker = 0
-        pt = 26 # MJPEG (we convert all frames to JPEG)
+        pt = 26 
 
-        # Fill the header bytearray with RTP header fields
+        # Hader bytearray with RTP header fields
         header[0] = (version << 6) | (padding << 5) | (extension << 4) | cc
         header[1] = (marker << 7) | pt
-        header[2] = (seqnum >> 8) & 255 #upper bits
-        header[3] = seqnum & 255
+        header[2] = (seqnum >> 8) & 0xFF
+        header[3] = seqnum & 0xFF
 
-        # Bytes 4-7 are for the timestamp, in our case, the time() as an int. Its your task to
-        # fill this in.
-        header[4] = 
-        header[5] = 
-        header[6] = 
-        header[7] = 
+        # Bytes 4-7 are for the timestamp
+        header[4] = (timestamp >> 24) & 0xFF
+        header[5] = (timestamp >> 16) & 0xFF
+        header[6] = (timestamp >> 8) & 0xFF
+        header[7] = timestamp & 0xFF
 
-        # Bytes 8-11 are for the SSRC, in our case, 0. Its your task to
-        # fill this in.
-        header[8] = 
-        header[9] = 
-        header[10] = 
-        header[11] = 
+        # Bytes 8-11 are for the SSRC
+        header[8] = (ssrc >> 24) & 0xFF
+        header[9] = (ssrc >> 16) & 0xFF
+        header[10] = (ssrc >> 8) & 0xFF
+        header[11] = ssrc & 0xFF
         
         self.header = header
         
