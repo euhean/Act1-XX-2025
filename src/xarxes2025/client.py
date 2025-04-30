@@ -20,6 +20,9 @@ class Client(object):
         self.filename = filename
 
         self.socket = None
+        self.tcp_socket = None 
+        self.session_id = None
+        self.cseq = 1
         self.running = False
 
         self.create_ui()
@@ -83,6 +86,9 @@ class Client(object):
         if self.socket:
             self.socket.close()
             self.socket = None
+        if self.tcp_socket:
+            self.tcp_socket.close()
+            self.tcp_socket = None
 
         self.root.destroy()
         logger.debug("Window closed")
@@ -91,6 +97,47 @@ class Client(object):
     def ui_setup_event(self):
         logger.debug("Setup button clicked")
         self.text["text"] = "Setup button clicked"
+        if not self._connect_rtsp_server(): return
+        if not self._send_rtsp_setup(): return
+
+        self._setup_udp_socket()
+        self.updateMovie(None)
+
+    def _connect_rtsp_server(self):
+        try:
+            self.tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            self.tcp_socket.connect(self.server_address)
+            return True
+        except Exception as e:
+            logger.error(f"RTSP TCP connection failed: {e}")
+            return False
+
+    def _send_rtsp_setup(self):
+        try:
+            request = (
+                f"SETUP {self.filename} RTSP/1.0\r\n"
+                f"CSeq: {self.cseq}\r\n"
+                f"Transport: RTP/UDP; client_port= {self.PORT}\r\n\r\n"
+            )
+            self.tcp_socket.send(request.encode())
+            logger.debug(f"Sent RTSP SETUP request:\n{request}")
+
+            response = self.tcp_socket.recv(1024).decode()
+            logger.debug(f"Received RTSP response:\n{response}")
+
+            if "200 OK" in response:
+                self.session_id = self._parse_session_id(response)
+                logger.success(f"RTSP session established: {self.session_id}")
+                self.cseq += 1
+                return True
+            else:
+                logger.error("RTSP SETUP failed")
+                return False
+        except Exception as e:
+            logger.error(f"RTSP setup failed: {e}")
+            return False
+
+    def _setup_udp_socket(self):
         if self.socket is None:
             try:
                 self.socket = socket.socket(
@@ -100,43 +147,76 @@ class Client(object):
                 )
                 self.socket.settimeout(0.5)
             except OSError as e:
-                logger.error(f"Failed to create socket - {e}")
+                logger.error(f"Failed to create UDP socket - {e}")
                 sys.exit(1)
-
-            self.socket.sendto(self.filename.encode(), self.server_address)
-            logger.success(f"Filename '{self.filename}' sent to {self.server_address}")              
-
-        self.updateMovie(None)
 
     def ui_play_event(self):
         logger.debug("Play button clicked")
         self.text["text"] = "Play button clicked"
-        if self.socket is None:
-            logger.error("Socket not set up! Press Setup first.")
+        if self.tcp_socket is None:
+            logger.error("RTSP TCP socket not established. Press Setup first.")
             return
-        
-        self.running = True
-        self.receive_frame()
+
+        request = (
+            f"PLAY {self.filename} RTSP/1.0\r\n"
+            f"CSeq: {self.cseq}\r\n"
+            f"Session: {self.session_id}\r\n\r\n"
+        )
+        self.tcp_socket.send(request.encode())
+        response = self.tcp_socket.recv(1024).decode()
+        logger.debug(f"Received RTSP response:\n{response}")
+
+        if "200 OK" in response:
+            self.running = True
+            self.receive_frame()
+        else: logger.error("RTSP PLAY failed")
+
+        self.cseq += 1
 
     def ui_pause_event(self):
         logger.debug("Pause button clicked")
         self.text["text"] = "Pause button clicked"
+        if self.tcp_socket:
+            request = (
+                f"PAUSE {self.filename} RTSP/1.0\r\n"
+                f"CSeq: {self.cseq}\r\n"
+                f"Session: {self.session_id}\r\n\r\n"
+            )
+            self.tcp_socket.send(request.encode())
+            response = self.tcp_socket.recv(1024).decode()
+            logger.debug(f"Received RTSP response:\n{response}")
+            self.cseq += 1
+
         self.running = False
 
     def ui_teardown_event(self):
         logger.debug("Teardown button clicked")
         self.text["text"] = "Teardown button clicked"
+        if self.tcp_socket:
+            request = (
+                f"TEARDOWN {self.filename} RTSP/1.0\r\n"
+                f"CSeq: {self.cseq}\r\n"
+                f"Session: {self.session_id}\r\n\r\n"
+            )
+            self.tcp_socket.send(request.encode())
+            response = self.tcp_socket.recv(1024).decode()
+            logger.debug(f"Received RTSP response:\n{response}")
+            self.cseq += 1
+
         self.running = False
         if self.socket:
             self.socket.close()
             self.socket = None
 
+        if self.tcp_socket:
+            self.tcp_socket.close()
+            self.tcp_socket = None
+
         if messagebox.askokcancel("Quit", "Do you want to quit?"):
             self.ui_close_window()
 
     def receive_frame(self):
-        if not self.running:
-            return
+        if not self.running: return
         try:
             data, _ = self.socket.recvfrom(65536) # 64KB buffer
             if data:
@@ -148,7 +228,7 @@ class Client(object):
             self.running = False
             messagebox.showerror("Socket Error", f"Socket error: {e}")
             return
-            
+
         self.root.after(30, self.receive_frame)
 
     def updateMovie(self, data):
@@ -159,3 +239,9 @@ class Client(object):
             self.movie.photo_image = photo
         except Exception as e:
             logger.error(f"Failed to update movie: {e}")
+
+    def _parse_session_id(self, response):
+        for line in response.splitlines():
+            if line.startswith("Session:"):
+                return line.split(":", 1)[1].strip()
+        return None

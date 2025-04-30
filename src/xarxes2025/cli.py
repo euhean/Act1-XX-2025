@@ -1,12 +1,10 @@
-import click
-import sys 
-
-
 from loguru import logger
-
 
 from xarxes2025.server import Server
 from xarxes2025.client import Client
+
+import click
+import sys 
 
 
 @click.group()
@@ -36,19 +34,10 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     ctx.obj['DEBUG_LEVEL'] = debug_level
     ctx.obj['DEBUG_FILE'] = debug_file
     fmt = "<e>{file}</e> | <r>{line}</r> | <g>{time:DD/MM/YY HH:mm:ss:SSS}</> | <lvl>{level}</> | <c>{message}</>"
-    if not debug_file:
-            debug_filename = sys.stderr
-    if debug:
-        if debug_level in ["TRACE", "DEBUG", "INFO", "WARNING", "ERROR"]:
-            logger.remove(0)
-            # logger.add(sys.stderr, level= debug_level, format=fmt, colorize=True)
-            logger.add(debug_filename, level= debug_level, format=fmt, colorize=True)
-        else:
-            logger.remove(0)            
-            logger.add(debug_filename, level="ERROR", format=fmt, colorize=True)
-    else:
-        logger.remove(0)
-        logger.add(sys.stderr, level="ERROR", format=fmt, colorize=True)
+    log_output = debug_filename if debug_file else sys.stderr
+
+    logger.remove(0)
+    logger.add(log_output, level=debug_level if debug else "ERROR", format=fmt, colorize=True)
 
     logger.debug(f"Debug mode is {'on' if debug else 'off'}")
     logger.debug(f"Debug level is {debug_level}")
@@ -69,18 +58,40 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     "-h",
     "--host",
     help="IP Address for RTSP server to connect (TCP)",
-    default=4321,
+    default=Server.HOST,
     show_default=True,
 )
 @click.option(
-    "-u",
-    "--udp-port",
-    help="RTP port (UCP) Client",
-    default=4321,
+    "--max-frames",
+    help="Maximum number of frames to stream",
+    type=int   
+)
+@click.option(
+    "--frame-rate",
+    help="Frame rate to stream (FPS)",
+    default=60,
     show_default=True,
     type=int
 )
-def server(ctx, port):
+@click.option(
+    "--loss-rate",
+    help="Loss rate of UDP/RTP stream (0-100)",
+    default=0,
+    show_default=True,
+    type=int   
+)
+@click.option(
+    "--error",
+    help="Comportar-se com si hi hagués un error",
+    default=0,
+    show_default=True,
+    type=int   
+)
+@click.option(
+    "--help",
+    help="Show this message and exit"
+)
+def server(ctx, **kwargs):
     """
     Start an RTSP server streaming video.
 
@@ -89,7 +100,8 @@ def server(ctx, port):
     port (default is 4321).
     """
     logger.info("Server xarxes 2025 video streaming")
-    server = Server(port)
+    logger.debug(f"Server args: {kwargs}")
+    server = Server(kwargs["port"])
 
 
 @cli.command(name="client")
@@ -102,7 +114,7 @@ def server(ctx, port):
 @click.option(
     "-p",
     "--port",
-    help="RTSP port (TCP)",
+    help="RTSP port (TCP) Server",
     default=4321,
     show_default=True,
     type=int
@@ -111,18 +123,22 @@ def server(ctx, port):
     "-h",
     "--host",
     help="IP Address for RTSP server to connect (TCP)",
-    default=4321,
+    default=Server.HOST,
     show_default=True,
 )
 @click.option(
     "-u",
     "--udp-port",
-    help="RTP port (UCP) Client",
-    default=4321,
+    help="RTP port (UDP) Client",
+    default=25000,
     show_default=True,
     type=int
 )
-def client(ctx, videofile, port):
+@click.option(
+    "--help",
+    help="Show this message and exit"   
+)
+def client(ctx, videofile, **kwargs):
     """
     Start an RTSP client streaming video.
 
@@ -131,5 +147,6 @@ def client(ctx, videofile, port):
     port (default is 4321).
     """
     logger.info("Client xarxes 2025 video streaming")
-    client = Client(port, videofile)
+    logger.debug(f"Client args: videofile={videofile}, {kwargs}")
+    client = Client(kwargs["port"], videofile)
     client.root.mainloop()

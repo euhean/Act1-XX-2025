@@ -94,7 +94,7 @@ class Server(object):
         if transport:
             udp_port = self._extract_client_port(transport)
             if udp_port:
-                self.client_address = ("127.0.0.1", udp_port)
+                self.client_address = (self.HOST, udp_port)
                 logger.success(f"Client UDP port set to {udp_port}")
 
         cseq = headers.get("CSeq", "0")
