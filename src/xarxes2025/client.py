@@ -1,6 +1,6 @@
 from tkinter import Tk, Label, Button, W, E, N, S, messagebox
+from xarxes2025.helpers import RTSPRequestBuilder
 from PIL import Image, ImageTk
-
 from loguru import logger
 
 import threading
@@ -96,21 +96,17 @@ class Client:
 
     def _send_rtsp_command(self, command):
         try:
-            if command == "SETUP":
-                if not self._connect_rtsp_server(): return
-                request = (
-                        f"SETUP {self.filename} RTSP/1.0\r\n"
-                        f"CSeq: {self.cseq}\r\n"
-                        f"Transport: RTP/UDP; client_port={self.RTP_PORT}\r\n"
-                        f"\r\n"
-                    )            
-            else:
-                request = (
-                        f"{command} {self.filename} RTSP/1.0\r\n"
-                        f"CSeq: {self.cseq}\r\n"
-                        f"Transport: RTP/UDP; client_port={self.RTP_PORT}\r\n"
-                        f"\r\n"
-                    )
+            if command == "SETUP" and not self._connect_rtsp_server():
+                return
+
+            request = RTSPRequestBuilder.build(
+                command=command,
+                filename=self.filename,
+                cseq=self.cseq,
+                session_id=self.session_id,
+                client_port=self.RTP_PORT
+            )
+
             self.tcp_socket.send(request.encode())
             response = self.tcp_socket.recv(1024).decode()
             status_code = response.split(" ")[1]
@@ -134,16 +130,17 @@ class Client:
             logger.error(f"Socket error: {e}")
             self.running = False
             self._close_sockets()
-        
+
     def handle_errors(self, status_code):
         if status_code != "200":
-                match status_code:
-                    case "400": logger.error("400 Bad Request")
-                    case "404": logger.error("404 File Not Found")
-                    case "500": logger.error("500 Internal Server Error")
-                    case "501": logger.error("501 Not Implemented")
-                    case _: logger.error(f"Unknown error: {status_code}")
-                return
+            match status_code:
+                case "400": logger.error("400 Bad Request")
+                case "404": logger.error("404 File Not Found")
+                case "500": logger.error("500 Internal Server Error")
+                case "501": logger.error("501 Not Implemented")
+                case _: logger.error(f"Unknown error: {status_code}")
+            return
+        else: logger.info("200 OK! RTSP command successful")
 
     def update_movie(self, data):
         photo = ImageTk.PhotoImage(Image.open(io.BytesIO(data)))
