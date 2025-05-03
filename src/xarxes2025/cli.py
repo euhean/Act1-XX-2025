@@ -58,7 +58,7 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     "-h",
     "--host",
     help="IP Address for RTSP server to connect (TCP)",
-    default=Server.HOST,
+    default="127.0.0.1",
     show_default=True,
 )
 @click.option(
@@ -123,7 +123,7 @@ def server(ctx, **kwargs):
     "-h",
     "--host",
     help="IP Address for RTSP server to connect (TCP)",
-    default=Server.HOST,
+    default="127.0.0.1",
     show_default=True,
 )
 @click.option(
