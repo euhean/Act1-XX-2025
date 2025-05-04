@@ -1,5 +1,5 @@
 from tkinter import Tk, Label, Button, W, E, N, S, messagebox
-from xarxes2025.helpers import RTSPRequestBuilder
+from xarxes2025.helpers import RTSPRequestBuilder, RTSPParser
 from PIL import Image, ImageTk
 from loguru import logger
 
@@ -24,6 +24,7 @@ class Client:
         self.running = False
         self.socket = None
         self.tcp_socket = None
+        logger.info("Initializing RTP Client...")
         self.create_ui()
 
     def create_ui(self):
@@ -34,10 +35,16 @@ class Client:
         Button(self.root, text="Play", command=lambda: self._handle_state("PLAY"), width=20).grid(row=0, column=1, padx=2, pady=2)
         Button(self.root, text="Pause", command=lambda: self._handle_state("PAUSE"), width=20).grid(row=0, column=2, padx=2, pady=2)
         Button(self.root, text="Teardown", command=lambda: self._handle_state("TEARDOWN"), width=20).grid(row=0, column=3, padx=2, pady=2)
-        self.movie = Label(self.root, height=29)
+        
+        placeholder = Image.new("RGB", (640, 380), color="white")
+        photo = ImageTk.PhotoImage(placeholder)
+
+        self.movie = Label(self.root, image=photo)
+        self.movie.image = photo
         self.movie.grid(row=1, column=0, columnspan=4, sticky=W+E+N+S, padx=5, pady=5)
 
     def ui_close_window(self):
+        logger.info("Closing RTP client window.")
         self.running = False
         self._close_sockets()
         self.root.destroy()
@@ -46,15 +53,18 @@ class Client:
     def _close_sockets(self):
         if self.socket:
             self.socket.close()
+            logger.info("UDP socket closed.")
             self.socket = None
         if self.tcp_socket:
             self.tcp_socket.close()
+            logger.info("TCP socket closed.")
             self.tcp_socket = None
 
     def _connect_rtsp_server(self):
         try:
             self.tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.tcp_socket.connect((self.HOST, self.RTSP_PORT))
+            logger.info(f"Connected to RTSP server at {self.HOST}:{self.RTSP_PORT}")
             return True
         except Exception as e:
             logger.error(f"Couldn't connect to the server: {e}")
@@ -64,8 +74,10 @@ class Client:
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.socket.settimeout(0.5)
         self.socket.bind((self.HOST, self.RTP_PORT))
+        logger.info(f"UDP socket bound to {self.HOST}:{self.RTP_PORT}")
 
     def receive_frame_thread(self):
+        logger.info("Started receiving frames thread.")
         while self.running:
             try:
                 data, _ = self.socket.recvfrom(65536)
@@ -73,8 +85,12 @@ class Client:
                     self.root.after(0, self.update_movie, data[12:])
             except socket.timeout:
                 continue
+            except Exception as e:
+                logger.error(f"Frame receiving error: {e}")
+        logger.info("Frame receiving thread terminated.")
 
     def _handle_state(self, command):
+        logger.info(f"[Session {self.session_id or 'N/A'}] Command: {command}")
         if self.state == self.INIT and command == "SETUP":
             self._send_rtsp_command(command)
             self.state = self.READY
@@ -108,13 +124,13 @@ class Client:
             )
 
             self.tcp_socket.send(request.encode())
-            response = self.tcp_socket.recv(1024).decode()
-            status_code = response.split(" ")[1]
+            raw_response = self.tcp_socket.recv(1024).decode().strip()
+            parsed = RTSPParser.parse_response(raw_response)
 
-            self.handle_errors(status_code)
+            self.handle_errors(parsed["status_code"])
+            self.session_id = parsed["headers"].get("Session", self.session_id)
 
             if command == "SETUP":
-                self.session_id = self._parse_session_id(response)
                 self._setup_udp_socket()
             elif command == "PLAY":
                 self.running = True
@@ -140,15 +156,9 @@ class Client:
                 case "501": logger.error("501 Not Implemented")
                 case _: logger.error(f"Unknown error: {status_code}")
             return
-        else: logger.info("200 OK! RTSP command successful")
+        else: logger.info(f"[Session {self.session_id or 'N/A'}] 200 Command successful.")
 
     def update_movie(self, data):
         photo = ImageTk.PhotoImage(Image.open(io.BytesIO(data)))
         self.movie.configure(image=photo)
-        self.movie.photo_image = photo
-
-    def _parse_session_id(self, response):
-        for line in response.splitlines():
-            if line.startswith("Session:"):
-                return line.split(":", 1)[1].strip()
-        return None
+        self.movie.image = photo

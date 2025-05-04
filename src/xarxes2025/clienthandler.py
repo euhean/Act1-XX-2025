@@ -1,6 +1,6 @@
 from xarxes2025.udpdatagram import UDPDatagram
 from xarxes2025.videoprocessor import VideoProcessor
-from xarxes2025.helpers import RTSPResponseBuilder
+from xarxes2025.helpers import RTSPResponseBuilder, RTSPParser
 
 from loguru import logger
 
@@ -37,23 +37,32 @@ class ClientHandler(threading.Thread):
             self.shutdown()
 
     def transition(self, next_state):
-        logger.info(f"[Session {self.session_id}] Transition: {self.state} -> {next_state}")
+        logger.info(f"[Session {self.session_id or 'N/A'}] Transition: {self.state} -> {next_state}")
         self.state = next_state
 
     def listen_rtsp_request(self):
-        request = self.client_socket.recv(1024).decode()
-        lines = request.strip().split('\n')
-        if not lines:
-            self._send_rtsp_response("0", 400, "Bad Request")
+        if not self.client_socket:
             return
+        try:
+            request = self.client_socket.recv(1024).decode()
+        except Exception as e:
+            logger.error(f"ClientHandler crashed while reading: {e}")
+            self.shutdown()
+            return
+        parsed = RTSPParser.parse_response(request)
+        method_line = request.splitlines()[0] if request else ""
+        method_parts = method_line.split(" ")
+        method = method_parts[0] if len(method_parts) >= 1 else None
+        filename = method_parts[1] if len(method_parts) >= 2 else None
 
-        method, filename = lines[0].split(' ')[:2]
-        headers = self._parse_headers(lines[1:])
-        cseq = headers.get("CSeq", "0")
-
+        cseq = parsed["headers"].get("CSeq", "0")
         logger.info(f"[Session {self.session_id}] {method} request, CSeq {cseq}, State {self.state}")
 
-        self._dispatch_request(method, filename, headers, cseq)
+        if not method or not filename:
+            self._send_rtsp_response(cseq, 400, "Bad Request")
+            return
+
+        self._dispatch_request(method, filename, parsed["headers"], cseq)
 
     def _dispatch_request(self, method, filename, headers, cseq):
         match method:
@@ -76,14 +85,6 @@ class ClientHandler(threading.Thread):
                 self._handle_teardown(headers)
             case _:
                 self._send_rtsp_response(cseq, 501, "Not Implemented")
-
-    def _parse_headers(self, header_lines):
-        headers = {}
-        for line in header_lines:
-            if ":" in line:
-                key, value = line.split(":", 1)
-                headers[key.strip()] = value.strip()
-        return headers
 
     def _handle_setup(self, filename, headers):
         self.filename = filename
@@ -157,8 +158,9 @@ class ClientHandler(threading.Thread):
         self.client_socket.send(response.encode())
 
     def shutdown(self):
-        logger.info(f"Shutting down session {self.session_id}...")
         try:
+            self.streaming = False
+            self.play_event.set()
             if self.client_socket:
                 self.client_socket.close()
                 self.client_socket = None
@@ -167,3 +169,5 @@ class ClientHandler(threading.Thread):
                 self.udp_socket = None
         except Exception as e:
             logger.warning(f"Shutdown error: {e}")
+        finally:
+            logger.info(f"[Session {self.session_id or 'N/A'}] ClientHandler cleanup completed")

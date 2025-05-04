@@ -5,6 +5,7 @@ from xarxes2025.client import Client
 
 import click
 import sys 
+import os
 
 
 @click.group()
@@ -33,11 +34,15 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     ctx.obj['DEBUG'] = debug
     ctx.obj['DEBUG_LEVEL'] = debug_level
     ctx.obj['DEBUG_FILE'] = debug_file
-    fmt = "<e>{file}</e> | <r>{line}</r> | <g>{time:DD/MM/YY HH:mm:ss:SSS}</> | <lvl>{level}</> | <c>{message}</>"
-    log_output = debug_filename if debug_file else sys.stderr
 
-    logger.remove(0)
-    logger.add(log_output, level=debug_level if debug else "ERROR", format=fmt, colorize=True)
+    LOG_DIR = "logs"
+    os.makedirs(LOG_DIR, exist_ok=True)
+    
+    fmt = "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
+
+    logger.remove()
+    logger.add(sys.stderr, level=debug_level if debug else "ERROR", colorize=True, format=fmt)
+    logger.add(f"{LOG_DIR}/xarxes.log", level=debug_level, rotation="500 KB", backtrace=True, diagnose=True, format=fmt)
 
     logger.debug(f"Debug mode is {'on' if debug else 'off'}")
     logger.debug(f"Debug level is {debug_level}")
@@ -87,11 +92,7 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     show_default=True,
     type=int   
 )
-@click.option(
-    "--help",
-    help="Show this message and exit"
-)
-def server(ctx, **kwargs):
+def server(ctx, port, host, **kwargs):
     """
     Start an RTSP server streaming video.
 
@@ -100,8 +101,9 @@ def server(ctx, **kwargs):
     port (default is 4321).
     """
     logger.info("Server xarxes 2025 video streaming")
-    logger.debug(f"Server args: {kwargs}")
-    server = Server(kwargs["port"])
+    logger.debug(f"Server args: port={port}, host={host}, other={kwargs}")
+    srv = Server(port=port, host=host)
+    srv.run()
 
 
 @cli.command(name="client")
@@ -134,11 +136,7 @@ def server(ctx, **kwargs):
     show_default=True,
     type=int
 )
-@click.option(
-    "--help",
-    help="Show this message and exit"   
-)
-def client(ctx, videofile, **kwargs):
+def client(ctx, videofile, port, host, udp_port):
     """
     Start an RTSP client streaming video.
 
@@ -146,7 +144,9 @@ def client(ctx, videofile, **kwargs):
     The client will use for outgoing RTSP connections the specified
     port (default is 4321).
     """
+    debug = ctx.obj.get('DEBUG', False)
+    logger.debug(f"Client starting with debug={debug}")
     logger.info("Client xarxes 2025 video streaming")
-    logger.debug(f"Client args: videofile={videofile}, {kwargs}")
-    client = Client(kwargs["port"], videofile)
+    logger.debug(f"Client args: videofile={videofile}, port={port}, host={host}, udp_port={udp_port}")
+    client = Client(port, videofile)
     client.root.mainloop()
