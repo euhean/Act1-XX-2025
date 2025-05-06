@@ -1,5 +1,7 @@
 from loguru import logger
 
+import re
+
 
 class RTSPResponseBuilder:
     @staticmethod
@@ -28,28 +30,31 @@ class RTSPRequestBuilder:
 
 
 class RTSPParser:
+    STATUS_LINE_REGEX = re.compile(r"^RTSP/\d+\.\d+\s+(\d+)\s+(.*)$")
+
     @staticmethod
     def parse_response(response: str) -> dict:
-        result = {
+        parsed = {
             "status_code": None,
             "status_message": None,
             "headers": {},
             "raw": response
         }
 
-        lines = response.strip().splitlines()
+        lines = list(filter(None, map(str.strip, response.splitlines())))
         if not lines:
-            return result
+            return parsed
 
-        status_parts = lines[0].split(" ", 2)
-        if len(status_parts) >= 2:
-            result["status_code"] = status_parts[1]
-        if len(status_parts) == 3:
-            result["status_message"] = status_parts[2]
+        match = RTSPParser.STATUS_LINE_REGEX.match(lines[0])
+        if match:
+            parsed["status_code"] = match.group(1)
+            parsed["status_message"] = match.group(2)
 
-        for line in lines[1:]:
-            if ":" in line:
-                key, value = line.split(":", 1)
-                result["headers"][key.strip()] = value.strip()
-
-        return result
+        parsed["headers"] = {
+            key.strip(): value.strip()
+            for line in lines[1:]
+            if ":" in line
+            for key, value in [line.split(":", 1)]
+        }
+        
+        return parsed

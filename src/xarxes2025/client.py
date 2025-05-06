@@ -13,17 +13,17 @@ import random
 class Client:
     INIT, READY, PLAYING = "INIT", "READY", "PLAYING"
 
-    def __init__(self, server_port, filename):
+    def __init__(self, filename, rtsp_port, host, rtp_port):
         self.state = self.INIT
-        self.RTSP_PORT = server_port or 25000
-        self.RTP_PORT = random.randint(25001, 30000)
-        self.HOST = "127.0.0.1"
+        self.RTSP_PORT = rtsp_port
+        self.RTP_PORT = rtp_port
+        self.HOST = host
         self.filename = filename
         self.session_id = None
         self.cseq = 1
         self.running = False
-        self.socket = None
         self.tcp_socket = None
+        self.udp_socket = None
         logger.info("Initializing RTP Client...")
         self.create_ui()
 
@@ -51,10 +51,10 @@ class Client:
         sys.exit(0)
 
     def _close_sockets(self):
-        if self.socket:
-            self.socket.close()
+        if self.udp_socket:
+            self.udp_socket.close()
             logger.info("UDP socket closed.")
-            self.socket = None
+            self.udp_socket = None
         if self.tcp_socket:
             self.tcp_socket.close()
             logger.info("TCP socket closed.")
@@ -65,24 +65,24 @@ class Client:
             self.tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.tcp_socket.connect((self.HOST, self.RTSP_PORT))
             logger.info(f"Connected to RTSP server at {self.HOST}:{self.RTSP_PORT}")
-            return True
         except Exception as e:
             logger.error(f"Couldn't connect to the server: {e}")
-            return False
+            self.running = False
+            self._close_sockets()
 
     def _setup_udp_socket(self):
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.socket.settimeout(0.5)
-        self.socket.bind((self.HOST, self.RTP_PORT))
+        self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        self.udp_socket.settimeout(0.5)
+        self.udp_socket.bind((self.HOST, self.RTP_PORT))
         logger.info(f"UDP socket bound to {self.HOST}:{self.RTP_PORT}")
 
-    def receive_frame_thread(self):
+    def _receive_frame_thread(self):
         logger.info("Started receiving frames thread.")
         while self.running:
             try:
-                data, _ = self.socket.recvfrom(65536)
+                data, _ = self.udp_socket.recvfrom(65536)
                 if data:
-                    self.root.after(0, self.update_movie, data[12:])
+                    self.root.after(0, self._update_movie, data[12:])
             except socket.timeout:
                 continue
             except Exception as e:
@@ -91,30 +91,47 @@ class Client:
 
     def _handle_state(self, command):
         logger.info(f"[Session {self.session_id or 'N/A'}] Command: {command}")
+        self._connect_rtsp_server()
         if self.state == self.INIT and command == "SETUP":
-            self._send_rtsp_command(command)
+            if not self._connect_rtsp_server(): return
+            self._send_rtsp_request_get_response(command)
+            self._setup_udp_socket()
             self.state = self.READY
+            self._messagebox_logger("Setup completed", command)
         elif self.state == self.READY:
             if command == "PLAY":
-                self._send_rtsp_command(command)
+                self._send_rtsp_request_get_response(command)
+                self.running = True
                 self.state = self.PLAYING
+                threading.Thread(target=self._receive_frame_thread, daemon=True).start()
+                self._messagebox_logger("Playing", command)
             elif command == "TEARDOWN":
-                self._send_rtsp_command(command)
+                self._send_rtsp_request_get_response(command)
+                self.udp_socket.close()
+                self.udp_socket = None
                 self.state = self.INIT
+                self._messagebox_logger("Teardown", command)
         elif self.state == self.PLAYING:
+            self.running = False
             if command == "PAUSE":
-                self._send_rtsp_command(command)
+                self._send_rtsp_request_get_response(command)
                 self.state = self.READY
+                self._messagebox_logger("Pausing", command)
             elif command == "TEARDOWN":
-                self._send_rtsp_command(command)
+                self._send_rtsp_request_get_response(command)
+                self.udp_socket.close()
+                self.udp_socket = None
                 self.state = self.INIT
-        else: logger.error("Invalid state transition")
+                self._messagebox_logger("Teardown", command)
+        else: messagebox.showerror("Invalid state transition")
+        self.cseq += 1
 
-    def _send_rtsp_command(self, command):
+    def _messagebox_logger(self, message, command):
+        messagebox.showinfo(f"[Session: {self.session_id or 'N/A'}]", 
+                            f"Cseq: {self.cseq}, Command {command} {message}")
+
+    def _send_rtsp_request_get_response(self, command):
         try:
-            if command == "SETUP" and not self._connect_rtsp_server():
-                return
-
             request = RTSPRequestBuilder.build(
                 command=command,
                 filename=self.filename,
@@ -122,32 +139,19 @@ class Client:
                 session_id=self.session_id,
                 client_port=self.RTP_PORT
             )
-
             self.tcp_socket.send(request.encode())
             raw_response = self.tcp_socket.recv(1024).decode().strip()
             parsed = RTSPParser.parse_response(raw_response)
 
-            self.handle_errors(parsed["status_code"])
+            self._handle_errors(parsed["status_code"])
             self.session_id = parsed["headers"].get("Session", self.session_id)
-
-            if command == "SETUP":
-                self._setup_udp_socket()
-            elif command == "PLAY":
-                self.running = True
-                threading.Thread(target=self.receive_frame_thread, daemon=True).start()
-            elif command in ["PAUSE", "TEARDOWN"]:
-                self.running = False
-                if command == "TEARDOWN":
-                    self.socket.close()
-                    self.socket = None
-            self.cseq += 1
 
         except socket.error as e:
             logger.error(f"Socket error: {e}")
             self.running = False
             self._close_sockets()
 
-    def handle_errors(self, status_code):
+    def _handle_errors(self, status_code):
         if status_code != "200":
             match status_code:
                 case "400": logger.error("400 Bad Request")
@@ -158,7 +162,7 @@ class Client:
             return
         else: logger.info(f"[Session {self.session_id or 'N/A'}] 200 Command successful.")
 
-    def update_movie(self, data):
+    def _update_movie(self, data):
         photo = ImageTk.PhotoImage(Image.open(io.BytesIO(data)))
         self.movie.configure(image=photo)
         self.movie.image = photo

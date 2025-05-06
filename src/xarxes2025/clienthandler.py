@@ -15,6 +15,7 @@ class ClientHandler(threading.Thread):
 
     def __init__(self, client_socket, address):
         super().__init__(daemon=True)
+        self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.client_socket = client_socket
         self.client_address = address
         self.state = self.INIT
@@ -23,24 +24,23 @@ class ClientHandler(threading.Thread):
         self.video = None
         self.streaming = False
         self.frame_number = 0
-        self.udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.frame_interval = 1 / 30
         self.play_event = threading.Event()
 
     def run(self):
         try:
             while True:
-                self.listen_rtsp_request()
+                self._listen_rtsp_request()
         except Exception as e:
             logger.error(f"ClientHandler crashed: {e}")
         finally:
             self.shutdown()
 
-    def transition(self, next_state):
+    def _state_transition(self, next_state):
         logger.info(f"[Session {self.session_id or 'N/A'}] Transition: {self.state} -> {next_state}")
         self.state = next_state
 
-    def listen_rtsp_request(self):
+    def _listen_rtsp_request(self):
         if not self.client_socket:
             return
         try:
@@ -50,22 +50,22 @@ class ClientHandler(threading.Thread):
             self.shutdown()
             return
         parsed = RTSPParser.parse_response(request)
-        method_line = request.splitlines()[0] if request else ""
-        method_parts = method_line.split(" ")
-        method = method_parts[0] if len(method_parts) >= 1 else None
-        filename = method_parts[1] if len(method_parts) >= 2 else None
+        command_line = request.splitlines()[0] if request else ""
+        command_parts = command_line.split(" ")
+        command = command_parts[0] if len(command_parts) >= 1 else None
+        filename = command_parts[1] if len(command_parts) >= 2 else None
 
         cseq = parsed["headers"].get("CSeq", "0")
-        logger.info(f"[Session {self.session_id}] {method} request, CSeq {cseq}, State {self.state}")
+        logger.info(f"[Session {self.session_id}] {command} request, CSeq {cseq}, State {self.state}")
 
-        if not method or not filename:
+        if not command or not filename:
             self._send_rtsp_response(cseq, 400, "Bad Request")
             return
 
-        self._dispatch_request(method, filename, parsed["headers"], cseq)
+        self._dispatch_request(command, filename, parsed["headers"], cseq)
 
-    def _dispatch_request(self, method, filename, headers, cseq):
-        match method:
+    def _dispatch_request(self, command, filename, headers, cseq):
+        match command:
             case "SETUP":
                 if self.state == self.INIT:
                     self._handle_setup(filename, headers)
@@ -95,7 +95,7 @@ class ClientHandler(threading.Thread):
             self._send_rtsp_response(headers.get("CSeq", "0"), 404, "File Not Found")
             return
 
-        self.session_id = f"XARXES_{random.randint(0,99999999):010d}"
+        self.session_id = f"XARXES_{random.randint(0,9999999999):010d}"
         if "Transport" not in headers:
             self._send_rtsp_response(headers.get("CSeq", "0"), 400, "Missing Transport Header")
             return
@@ -109,41 +109,36 @@ class ClientHandler(threading.Thread):
             return
 
         self._send_rtsp_response(headers["CSeq"], session=self.session_id)
-        self.transition(self.READY)
+        self._state_transition(self.READY)
 
     def _handle_play(self, headers):
-        if headers.get("Session") != self.session_id:
-            self._send_rtsp_response(headers.get("CSeq", "0"), 400, "Invalid Session")
-            return
-
-        self._send_rtsp_response(headers["CSeq"], session=self.session_id)
+        self._is_current_session(headers)
         self.play_event.set()
         if not self.streaming:
             self.streaming = True
-            threading.Thread(target=self.stream_frames, daemon=True).start()
-        self.transition(self.PLAYING)
+            threading.Thread(target=self._stream_frames, daemon=True).start()
+        self._state_transition(self.PLAYING)
 
     def _handle_pause(self, headers):
-        if headers.get("Session") != self.session_id:
-            self._send_rtsp_response(headers.get("CSeq", "0"), 400, "Invalid Session")
-            return
-
-        self._send_rtsp_response(headers["CSeq"], session=self.session_id)
+        self._is_current_session(headers)
         self.play_event.clear()
-        self.transition(self.READY)
+        self._state_transition(self.READY)
 
     def _handle_teardown(self, headers):
+        self._is_current_session(headers)
+        self.streaming = False
+        self.play_event.clear()
+        self._state_transition(self.INIT)
+        self.shutdown()
+
+    def _is_current_session(self, headers):
         if headers.get("Session") != self.session_id:
             self._send_rtsp_response(headers.get("CSeq", "0"), 400, "Invalid Session")
             return
 
-        self.streaming = False
-        self.play_event.clear()
         self._send_rtsp_response(headers["CSeq"], session=self.session_id)
-        self.transition(self.INIT)
-        self.shutdown()
 
-    def stream_frames(self):
+    def _stream_frames(self):
         while self.streaming:
             self.play_event.wait()
             frame_data = self.video.next_frame()

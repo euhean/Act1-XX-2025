@@ -7,8 +7,9 @@ import sys
 
 class Server:
     def __init__(self, port, host):
-        self.host = host or "127.0.0.1"
-        self.port = port or 4321
+        self.host = host
+        self.port = port
+        self.client_handler = None
         self.server_socket = None
         self.client_threads = []
 
@@ -20,7 +21,7 @@ class Server:
             self.server_socket.listen(5)
             logger.info(f"RTSP server listening on {self.host}:{self.port}")
         except Exception as e:
-            logger.exception(f"Failed during server initialization: {e}")
+            logger.exception(f"Failed during socket initialization: {e}")
             sys.exit(1)
 
     def run(self):
@@ -29,8 +30,8 @@ class Server:
             while True:
                 client_socket, addr = self.server_socket.accept()
                 logger.info(f"Accepted connection from {addr}")
-                handler = ClientHandler(client_socket, addr)
-                handler.start()
+                self.client_handler = ClientHandler(client_socket, addr)
+                self.client_handler.start()
         except KeyboardInterrupt:
             logger.info("Server shutdown requested via KeyboardInterrupt")
         except Exception as e:
@@ -54,17 +55,3 @@ class Server:
             logger.warning(f"Error during shutdown: {e}")
         finally:
             sys.exit(0)
-
-
-def main():
-    import argparse
-    parser = argparse.ArgumentParser(description="RTSP Server")
-    parser.add_argument("--port", type=int, default=4321)
-    parser.add_argument("--host", type=str, default="127.0.0.1")
-    args = parser.parse_args()
-    server = Server(args.port)
-    server.run()
-
-
-if __name__ == "__main__":
-    main()

@@ -74,7 +74,7 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
 @click.option(
     "--frame-rate",
     help="Frame rate to stream (FPS)",
-    default=60,
+    default=30,
     show_default=True,
     type=int
 )
@@ -148,5 +148,5 @@ def client(ctx, videofile, port, host, udp_port):
     logger.debug(f"Client starting with debug={debug}")
     logger.info("Client xarxes 2025 video streaming")
     logger.debug(f"Client args: videofile={videofile}, port={port}, host={host}, udp_port={udp_port}")
-    client = Client(port, videofile)
+    client = Client(videofile, port=port, host=host, udp_port=udp_port)
     client.root.mainloop()
