@@ -101,7 +101,7 @@ def server(ctx, port, host, **kwargs):
     port (default is 4321).
     """
     logger.info("Server xarxes 2025 video streaming")
-    logger.debug(f"Server args: port={port}, host={host}, other={kwargs}")
+    logger.debug(f"Server args: port={port}, host={host}")
     srv = Server(port=port, host=host)
     srv.run()
 
@@ -148,5 +148,5 @@ def client(ctx, videofile, port, host, udp_port):
     logger.debug(f"Client starting with debug={debug}")
     logger.info("Client xarxes 2025 video streaming")
     logger.debug(f"Client args: videofile={videofile}, port={port}, host={host}, udp_port={udp_port}")
-    client = Client(videofile, port=port, host=host, udp_port=udp_port)
+    client = Client(filename=videofile, rtsp_port=port, host=host, rtp_port=udp_port)
     client.root.mainloop()

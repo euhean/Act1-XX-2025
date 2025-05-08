@@ -9,7 +9,6 @@ class Server:
     def __init__(self, port, host):
         self.host = host
         self.port = port
-        self.client_handler = None
         self.server_socket = None
         self.client_threads = []
 
@@ -30,8 +29,9 @@ class Server:
             while True:
                 client_socket, addr = self.server_socket.accept()
                 logger.info(f"Accepted connection from {addr}")
-                self.client_handler = ClientHandler(client_socket, addr)
-                self.client_handler.start()
+                handler = ClientHandler(client_socket, addr)
+                self.client_threads.append(handler)
+                handler.start()
         except KeyboardInterrupt:
             logger.info("Server shutdown requested via KeyboardInterrupt")
         except Exception as e:
@@ -46,7 +46,7 @@ class Server:
                 if thread.is_alive():
                     thread.shutdown()
                     thread.join(timeout=2)
-                    logger.info(f"[Session {thread.session_id or 'N/A'}] ClientHandler thread joined")
+                    logger.info(f"[Session {thread.session.session_id}] ClientHandler thread joined")
             if self.server_socket:
                 self.server_socket.close()
                 self.server_socket = None

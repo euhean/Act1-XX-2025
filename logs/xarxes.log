@@ -1,114 +1,1294 @@
-2025-05-04 03:17:29.270 | INFO | xarxes2025.cli:server:104 - Server xarxes 2025 video streaming
-2025-05-04 03:17:29.279 | INFO | xarxes2025.server:initialize_socket:20 - RTSP server listening on 127.0.0.1:4321
-2025-05-04 03:17:36.328 | INFO | xarxes2025.cli:client:150 - Client xarxes 2025 video streaming
-2025-05-04 03:17:36.333 | INFO | xarxes2025.client:__init__:27 - Initializing RTP Client...
-2025-05-04 03:17:36.488 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] RTSP client launched
-2025-05-04 03:17:41.883 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] Command: SETUP
-2025-05-04 03:17:41.884 | INFO | xarxes2025.server:run:30 - Accepted connection from ('127.0.0.1', 45432)
-2025-05-04 03:17:41.885 | INFO | xarxes2025.client:_connect_rtsp_server:73 - Connected to RTSP server at 127.0.0.1:4321
-2025-05-04 03:17:41.891 | ERROR | xarxes2025.clienthandler:run:35 - ClientHandler crashed: cannot access local variable 'e' where it is not associated with a value
-2025-05-04 03:17:41.892 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] TCP socket closed
-2025-05-04 03:17:41.892 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] UDP socket closed
-2025-05-04 03:17:41.892 | INFO | xarxes2025.clienthandler:shutdown:179 - Shutting down...
-2025-05-04 03:17:59.615 | INFO | xarxes2025.server:run:34 - Server shutdown requested via KeyboardInterrupt
-2025-05-04 03:17:59.618 | INFO | xarxes2025.server:shutdown:45 - Server socket closed
-2025-05-04 03:19:19.131 | INFO | xarxes2025.cli:server:104 - Server xarxes 2025 video streaming
-2025-05-04 03:19:19.134 | INFO | xarxes2025.server:initialize_socket:20 - RTSP server listening on 127.0.0.1:4321
-2025-05-04 03:19:23.023 | INFO | xarxes2025.cli:client:150 - Client xarxes 2025 video streaming
-2025-05-04 03:19:23.024 | INFO | xarxes2025.client:__init__:27 - Initializing RTP Client...
-2025-05-04 03:19:23.150 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] RTSP client launched
-2025-05-04 03:19:32.391 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] Command: SETUP
-2025-05-04 03:19:32.393 | INFO | xarxes2025.client:_connect_rtsp_server:73 - Connected to RTSP server at 127.0.0.1:4321
-2025-05-04 03:19:32.395 | INFO | xarxes2025.server:run:30 - Accepted connection from ('127.0.0.1', 38854)
-2025-05-04 03:19:32.397 | ERROR | xarxes2025.clienthandler:run:35 - ClientHandler crashed: cannot access local variable 'e' where it is not associated with a value
-2025-05-04 03:19:32.399 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] TCP socket closed
-2025-05-04 03:19:32.399 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] UDP socket closed
-2025-05-04 03:19:32.399 | INFO | xarxes2025.clienthandler:shutdown:179 - Shutting down...
-2025-05-04 03:19:43.698 | INFO | xarxes2025.helpers:log_session:35 - [Session N/A] Command: TEARDOWN
-2025-05-04 03:19:43.698 | ERROR | xarxes2025.client:_handle_state:117 - Invalid state transition
-2025-05-04 03:19:52.800 | INFO | xarxes2025.server:run:34 - Server shutdown requested via KeyboardInterrupt
-2025-05-04 03:19:52.802 | INFO | xarxes2025.server:shutdown:45 - Server socket closed
-2025-05-04 04:37:33.200 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
-2025-05-04 04:37:33.207 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
-2025-05-04 04:37:41.089 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
-2025-05-04 04:37:41.091 | INFO | xarxes2025.client:__init__:27 - Initializing RTP Client...
-2025-05-04 04:37:47.825 | INFO | xarxes2025.client:_handle_state:93 - [Session N/A] Command: SETUP
-2025-05-04 04:37:47.829 | INFO | xarxes2025.client:_connect_rtsp_server:67 - Connected to RTSP server at 127.0.0.1:4321
-2025-05-04 04:37:47.829 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 60750)
-2025-05-04 04:37:47.831 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session None] SETUP request, CSeq 1, State INIT
-2025-05-04 04:37:48.028 | INFO | xarxes2025.client:handle_errors:159 - [Session N/A] 200 Command successful.
-2025-05-04 04:37:48.031 | INFO | xarxes2025.client:_setup_udp_socket:77 - UDP socket bound to 127.0.0.1:29209
-2025-05-04 04:37:48.032 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0010716818] Transition: INIT -> READY
-2025-05-04 04:38:06.485 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: PLAY
-2025-05-04 04:38:06.485 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0010716818] PLAY request, CSeq 2, State READY
-2025-05-04 04:38:06.485 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0010716818] 200 Command successful.
-2025-05-04 04:38:06.487 | INFO | xarxes2025.client:receive_frame_thread:80 - Started receiving frames thread.
-2025-05-04 04:38:06.496 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0010716818] Transition: READY -> PLAYING
-2025-05-04 04:38:15.023 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: PAUSE
-2025-05-04 04:38:15.032 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0010716818] PAUSE request, CSeq 3, State PLAYING
-2025-05-04 04:38:15.032 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0010716818] Transition: PLAYING -> READY
-2025-05-04 04:38:15.032 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0010716818] 200 Command successful.
-2025-05-04 04:38:15.512 | INFO | xarxes2025.client:receive_frame_thread:90 - Frame receiving thread terminated.
-2025-05-04 04:39:27.913 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: TEARDOWN
-2025-05-04 04:39:27.919 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0010716818] TEARDOWN request, CSeq 4, State READY
-2025-05-04 04:39:27.920 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0010716818] Transition: READY -> INIT
-2025-05-04 04:39:27.923 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0010716818] 200 Command successful.
-2025-05-04 04:39:27.925 | INFO | xarxes2025.clienthandler:shutdown:166 - [Session XARXES_0010716818] TCP socket closed
-2025-05-04 04:39:27.958 | INFO | xarxes2025.clienthandler:shutdown:170 - [Session XARXES_0010716818] UDP socket closed
-2025-05-04 04:39:27.958 | INFO | xarxes2025.clienthandler:shutdown:175 - [Session XARXES_0010716818] ClientHandler cleanup completed
-2025-05-04 04:48:42.277 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: TEARDOWN
-2025-05-04 04:48:42.278 | ERROR | xarxes2025.client:_handle_state:111 - Invalid state transition
-2025-05-04 04:48:45.095 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: PAUSE
-2025-05-04 04:48:45.095 | ERROR | xarxes2025.client:_handle_state:111 - Invalid state transition
-2025-05-04 04:48:47.285 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: PLAY
-2025-05-04 04:48:47.288 | ERROR | xarxes2025.client:_handle_state:111 - Invalid state transition
-2025-05-04 04:48:49.021 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0010716818] Command: SETUP
-2025-05-04 04:48:49.026 | INFO | xarxes2025.client:_connect_rtsp_server:67 - Connected to RTSP server at 127.0.0.1:4321
-2025-05-04 04:48:49.035 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 48388)
-2025-05-04 04:48:49.036 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session None] SETUP request, CSeq 5, State INIT
-2025-05-04 04:48:49.068 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0010716818] 200 Command successful.
-2025-05-04 04:48:49.070 | INFO | xarxes2025.client:_setup_udp_socket:77 - UDP socket bound to 127.0.0.1:29209
-2025-05-04 04:48:49.075 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0096062533] Transition: INIT -> READY
-2025-05-04 04:48:52.105 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0096062533] Command: TEARDOWN
-2025-05-04 04:48:52.115 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0096062533] TEARDOWN request, CSeq 6, State READY
-2025-05-04 04:48:52.116 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0096062533] 200 Command successful.
-2025-05-04 04:48:52.116 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0096062533] Transition: READY -> INIT
-2025-05-04 04:48:52.140 | INFO | xarxes2025.clienthandler:shutdown:166 - [Session XARXES_0096062533] TCP socket closed
-2025-05-04 04:48:52.140 | INFO | xarxes2025.clienthandler:shutdown:170 - [Session XARXES_0096062533] UDP socket closed
-2025-05-04 04:48:52.140 | INFO | xarxes2025.clienthandler:shutdown:175 - [Session XARXES_0096062533] ClientHandler cleanup completed
-2025-05-04 04:48:55.699 | INFO | xarxes2025.client:ui_close_window:47 - Closing RTP client window.
-2025-05-04 04:48:55.699 | INFO | xarxes2025.client:_close_sockets:60 - TCP socket closed.
-2025-05-04 04:48:59.101 | INFO | xarxes2025.server:run:35 - Server shutdown requested via KeyboardInterrupt
-2025-05-04 04:48:59.213 | INFO | xarxes2025.server:shutdown:43 - Shutting down all client threads...
-2025-05-04 04:48:59.258 | INFO | xarxes2025.server:shutdown:52 - Server socket closed
-2025-05-04 21:11:44.464 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
-2025-05-04 21:11:44.484 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
-2025-05-04 21:12:03.658 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
-2025-05-04 21:12:03.664 | INFO | xarxes2025.client:__init__:27 - Initializing RTP Client...
-2025-05-04 21:12:10.660 | INFO | xarxes2025.client:_handle_state:93 - [Session N/A] Command: SETUP
-2025-05-04 21:12:10.667 | INFO | xarxes2025.client:_connect_rtsp_server:67 - Connected to RTSP server at 127.0.0.1:4321
-2025-05-04 21:12:10.668 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 49804)
-2025-05-04 21:12:10.672 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session None] SETUP request, CSeq 1, State INIT
-2025-05-04 21:12:10.735 | INFO | xarxes2025.client:handle_errors:159 - [Session N/A] 200 Command successful.
-2025-05-04 21:12:10.739 | INFO | xarxes2025.client:_setup_udp_socket:77 - UDP socket bound to 127.0.0.1:29037
-2025-05-04 21:12:10.733 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0000136547] Transition: INIT -> READY
-2025-05-04 21:12:16.532 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0000136547] Command: PLAY
-2025-05-04 21:12:16.535 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0000136547] PLAY request, CSeq 2, State READY
-2025-05-04 21:12:16.535 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0000136547] 200 Command successful.
-2025-05-04 21:12:16.536 | INFO | xarxes2025.client:receive_frame_thread:80 - Started receiving frames thread.
-2025-05-04 21:12:16.653 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0000136547] Transition: READY -> PLAYING
-2025-05-04 21:12:22.021 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0000136547] Command: PAUSE
-2025-05-04 21:12:22.022 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0000136547] PAUSE request, CSeq 3, State PLAYING
-2025-05-04 21:12:22.022 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0000136547] Transition: PLAYING -> READY
-2025-05-04 21:12:22.024 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0000136547] 200 Command successful.
-2025-05-04 21:12:22.517 | INFO | xarxes2025.client:receive_frame_thread:90 - Frame receiving thread terminated.
-2025-05-04 21:12:28.885 | INFO | xarxes2025.client:_handle_state:93 - [Session XARXES_0000136547] Command: TEARDOWN
-2025-05-04 21:12:28.886 | INFO | xarxes2025.clienthandler:listen_rtsp_request:59 - [Session XARXES_0000136547] TEARDOWN request, CSeq 4, State READY
-2025-05-04 21:12:28.886 | INFO | xarxes2025.clienthandler:transition:40 - [Session XARXES_0000136547] Transition: READY -> INIT
-2025-05-04 21:12:28.887 | INFO | xarxes2025.clienthandler:shutdown:173 - [Session XARXES_0000136547] ClientHandler cleanup completed
-2025-05-04 21:12:28.890 | INFO | xarxes2025.client:handle_errors:159 - [Session XARXES_0000136547] 200 Command successful.
-2025-05-04 21:12:48.212 | INFO | xarxes2025.client:ui_close_window:47 - Closing RTP client window.
-2025-05-04 21:12:48.212 | INFO | xarxes2025.client:_close_sockets:60 - TCP socket closed.
-2025-05-04 21:12:53.432 | INFO | xarxes2025.server:run:35 - Server shutdown requested via KeyboardInterrupt
-2025-05-04 21:12:53.433 | INFO | xarxes2025.server:shutdown:43 - Shutting down all client threads...
-2025-05-04 21:12:53.440 | INFO | xarxes2025.server:shutdown:52 - Server socket closed
+2025-05-08 02:42:03.518 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.522 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.525 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.526 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.526 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.527 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.527 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.532 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.532 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.533 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.533 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.533 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.533 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.533 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.535 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.535 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.535 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.536 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.536 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.536 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.536 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.536 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.536 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.536 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.536 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.536 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.546 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.547 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.547 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.547 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.548 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.548 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.548 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.548 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.553 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.557 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.557 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.557 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.558 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.558 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.559 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.559 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.559 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.559 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.566 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.570 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.571 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.577 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.577 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.578 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.581 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.584 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.584 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.584 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.584 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.584 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.584 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.584 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.587 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.587 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.588 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.588 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.589 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.589 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.589 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.589 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.589 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.590 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.590 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.590 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.591 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.591 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.592 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.594 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.598 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.598 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.598 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.599 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.601 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.602 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.602 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.603 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.604 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.608 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.611 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.611 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.612 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.612 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.612 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.612 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.612 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.612 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.623 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.623 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.623 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.623 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.624 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.625 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.625 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.625 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.627 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.627 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.627 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.627 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.627 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.627 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.627 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.628 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.630 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.630 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.631 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.631 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.632 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.635 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.635 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.635 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.635 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.637 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.637 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.637 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.637 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.637 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.637 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.638 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.638 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.638 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.638 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.638 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.638 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.638 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.638 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.639 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.639 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.641 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.642 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.646 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.650 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.653 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.653 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.653 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.653 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.653 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.653 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.655 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.655 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.657 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.658 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.658 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.658 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.658 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.658 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.659 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.659 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.660 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.662 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.662 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.662 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.662 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.662 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.662 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.662 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.662 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.664 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.664 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.664 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.664 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.665 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.669 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.683 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.703 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.703 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.704 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.704 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.705 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.705 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.705 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.705 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.719 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.723 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.724 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.724 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.724 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.724 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.724 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.724 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.737 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.737 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.737 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.737 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.737 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.738 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.738 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.739 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.739 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.739 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.739 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.739 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.740 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.740 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.740 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.740 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.740 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.740 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.741 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.742 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.747 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.749 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.749 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.749 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.749 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.749 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.760 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.760 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.760 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.761 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.761 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.761 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.761 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.762 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.762 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.762 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.763 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.764 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.768 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.770 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.770 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.770 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.770 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.770 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.771 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.771 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.772 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.772 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.772 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.772 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.773 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.773 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.773 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.775 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.780 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.781 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.783 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.786 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.786 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.786 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.786 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.786 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.786 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.787 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.788 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.788 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.788 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.790 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.790 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.790 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.790 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.791 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.791 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.794 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.794 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.794 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.795 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.797 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.797 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.797 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.802 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.807 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.807 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.807 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.807 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.807 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.808 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.808 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.808 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.808 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.808 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.808 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.808 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.808 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.808 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.808 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.823 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.823 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.823 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.823 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.823 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.824 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.826 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.826 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.829 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.829 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.829 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.829 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.829 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.829 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.829 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.830 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.831 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.831 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.831 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.831 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.832 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.838 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.850 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.850 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.850 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.865 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.867 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.873 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.873 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.874 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.874 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.874 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.874 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.874 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.874 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.874 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.874 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.874 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.877 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.878 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.878 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.878 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.879 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.879 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.881 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.881 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.884 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.887 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.887 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.887 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.888 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.888 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.888 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.888 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.889 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.889 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.891 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.891 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.891 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.902 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.903 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.903 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.903 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.903 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.903 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.903 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.903 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.906 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.914 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.927 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.937 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.937 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.938 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.938 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.938 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.938 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.939 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.939 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.941 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.941 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.941 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.941 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.941 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.941 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.942 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.942 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.946 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.946 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.946 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.948 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.949 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.957 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.963 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.963 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.963 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.963 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.964 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.964 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.964 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.964 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.964 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.964 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.964 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.964 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.964 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.964 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.987 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.987 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.987 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.987 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.987 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.987 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.988 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.988 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.988 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.988 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.988 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.988 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.988 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.988 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.988 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.995 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.995 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.995 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.997 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.997 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.998 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.998 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:03.999 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:03.999 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.000 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.002 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.002 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.003 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.003 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.004 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.005 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.005 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.007 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.007 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.007 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.007 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.009 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.009 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.009 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.010 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.010 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.010 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.012 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.013 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.014 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.027 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.028 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.028 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.028 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.030 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.031 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.031 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.031 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.033 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.034 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.034 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.036 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.036 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.036 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.036 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.037 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.037 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.037 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.037 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.037 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.037 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.037 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.037 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.037 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.038 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.038 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.038 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.038 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.038 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.038 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.048 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.067 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.068 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.068 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.068 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.069 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.070 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.070 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.070 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.070 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.070 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.071 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.071 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.071 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.071 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.072 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.072 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.072 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.072 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.073 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.073 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.073 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.073 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.073 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.074 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.076 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.076 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.077 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.078 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.078 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.078 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.078 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.078 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.078 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.078 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.079 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.079 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.079 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.080 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.083 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.083 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.084 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.084 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.084 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.087 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.087 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.087 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.089 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.093 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.093 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.093 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.093 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.093 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.093 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.093 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.094 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.095 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.095 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.095 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.099 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.099 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.100 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.100 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.101 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.101 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.105 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.111 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.116 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.116 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.116 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.116 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.116 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.117 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.117 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.117 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.117 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.117 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.117 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.123 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.123 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.123 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.123 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.124 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.125 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.128 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.128 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.128 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.128 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.128 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.128 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.128 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.129 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.130 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.130 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.130 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.130 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.134 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.135 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.135 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.135 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.148 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.148 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.148 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.149 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.149 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.149 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.149 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.149 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.149 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.149 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.149 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.149 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.149 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.160 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.164 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.166 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.167 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.167 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.167 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.167 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.167 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.168 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.170 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.172 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.172 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.172 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.172 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.174 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.175 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.176 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.176 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.176 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.176 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.176 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.176 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.176 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.177 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.178 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.185 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.186 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.187 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.188 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.188 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.189 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.196 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.196 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.196 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.196 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.196 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.196 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.196 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.197 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.197 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.197 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.197 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.203 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.203 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.203 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.203 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.203 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.203 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.203 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.205 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.205 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.205 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.205 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.205 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.208 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.208 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.208 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.208 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.208 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.208 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.210 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.210 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.210 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.210 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.211 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.218 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.223 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.223 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.224 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.225 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.225 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.225 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.225 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.225 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.225 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.225 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.226 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.226 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.226 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.228 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.228 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.228 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.228 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.228 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.228 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.228 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.229 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.229 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.229 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.229 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.229 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.229 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.230 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.230 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.230 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.230 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.232 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.232 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.232 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.232 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.232 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.232 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.233 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.233 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.233 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.233 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.233 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.233 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.233 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.233 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.234 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.234 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.234 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.234 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.234 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.234 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.235 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.235 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.235 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.235 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.237 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.237 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.237 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.237 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.237 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.239 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.239 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.239 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.239 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.239 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.240 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.240 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.243 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.253 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.255 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.255 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.255 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.255 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.256 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.256 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.267 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.267 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.267 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.267 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.267 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.267 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.267 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.268 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.268 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.278 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.278 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.278 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.278 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.278 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.278 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.278 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.279 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.280 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.280 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.280 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.281 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.282 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.282 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.282 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.282 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.282 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.283 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.284 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.289 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.297 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.297 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.297 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.297 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.297 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.297 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.298 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.298 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.298 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.298 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.298 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.298 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.303 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.303 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.303 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.304 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.304 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.305 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.305 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.307 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.307 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.307 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.307 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.307 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.308 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.308 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.309 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.309 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.309 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.312 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.312 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.312 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.312 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.312 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.312 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.313 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.313 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.313 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.323 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.324 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.324 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.325 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.325 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.325 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.325 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.325 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.325 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.325 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.325 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.325 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.325 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.328 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.328 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.329 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.330 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.330 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.330 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.330 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.330 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.331 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.331 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.331 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.333 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.333 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.333 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.333 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.333 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.333 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.334 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.334 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.334 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.334 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.334 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.334 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.334 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.335 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.335 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.335 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.335 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.336 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.336 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.336 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.337 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.338 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.338 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.341 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.342 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.350 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.350 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.350 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.350 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.354 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.354 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.355 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.355 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.355 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.355 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.355 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.356 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.356 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.360 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.360 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.360 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.360 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.360 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.360 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.360 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.360 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.360 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.360 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.361 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.361 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.362 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.362 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.362 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.362 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.363 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.365 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.366 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.370 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.372 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.373 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.378 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.381 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.381 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.381 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.381 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.381 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.381 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.381 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.386 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.396 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.396 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.397 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.397 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.397 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.397 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.397 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.397 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.397 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.397 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.401 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.401 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.404 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.404 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.404 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.406 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.408 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.408 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.408 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.408 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.408 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.408 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.408 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.408 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.408 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.411 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.411 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.411 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.411 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.411 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.411 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.411 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.414 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.424 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.430 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.447 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.474 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.474 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.474 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.474 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.474 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.474 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.475 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.475 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.475 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.475 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.475 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.475 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.475 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.475 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.475 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.509 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.510 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.511 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.511 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.515 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.523 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.524 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.524 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.524 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.524 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.524 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.524 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.524 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.524 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.524 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.524 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.532 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.535 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.535 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.535 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.537 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.537 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.537 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.539 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.539 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.539 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.539 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.539 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.539 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.543 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.543 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.543 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.543 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.543 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.543 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.544 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.544 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.544 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.544 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.544 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.544 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.546 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.546 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.546 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.546 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.546 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.546 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.547 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.548 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.552 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.566 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.568 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.569 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.569 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.569 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.569 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.569 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.570 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.570 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.570 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.570 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.570 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.570 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.570 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.744 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.744 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.744 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.744 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.744 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.744 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.745 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.745 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.745 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.745 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.748 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.748 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.751 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.751 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.751 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.751 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.751 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.753 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.753 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.753 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.753 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.754 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.754 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.754 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.756 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.756 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.758 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.758 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.758 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.758 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.758 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.758 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.758 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.759 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.760 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.760 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.760 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.764 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.764 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.764 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.764 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.764 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.764 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.765 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.765 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.766 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.766 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.766 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.767 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.768 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.768 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.768 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.770 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.772 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.772 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.772 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.772 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.772 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.773 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.773 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.773 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.773 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.773 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.773 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.775 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.775 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.776 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.776 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.776 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.776 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.776 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.777 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.778 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.783 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.783 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.783 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.783 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.783 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.783 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.784 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.784 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.784 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.784 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.784 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.872 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.872 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.872 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.872 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.872 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.872 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.872 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.872 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.873 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.873 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.873 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 32] Broken pipe
+2025-05-08 02:42:04.803 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 02:42:04.878 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 02:42:04.878 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session N/A] TCP socket closed
+2025-05-08 02:42:04.879 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session N/A] UDP socket closed
+2025-05-08 02:42:04.879 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session N/A] finished
+2025-05-08 02:42:04.873 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A]  request, CSeq 0, State INIT
+2025-05-08 02:42:04.879 | ERROR | xarxes2025.session:_send_response:50 - [Session N/A] Failed to send response: [Errno 9] Bad file descriptor
+2025-05-08 02:42:06.885 | INFO | xarxes2025.server:shutdown:49 - [Session N/A] ClientHandler thread joined
+2025-05-08 02:42:06.891 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 02:45:43.568 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 02:45:43.580 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 02:45:46.172 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 02:45:46.176 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 02:45:50.484 | INFO | xarxes2025.client:_connect_rtsp_server:57 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 02:45:50.486 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 57432)
+2025-05-08 02:45:50.494 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 1, State INIT
+2025-05-08 02:45:50.759 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_9278832820] Session started
+2025-05-08 02:45:57.463 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:46:03.102 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:46:04.471 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:46:33.024 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 51036)
+2025-05-08 02:46:33.024 | INFO | xarxes2025.client:_connect_rtsp_server:57 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 02:46:33.028 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 2, State INIT
+2025-05-08 02:46:33.050 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_0338605619] Session started
+2025-05-08 02:46:36.168 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:46:37.757 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 56768)
+2025-05-08 02:46:37.757 | INFO | xarxes2025.client:_connect_rtsp_server:57 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 02:46:37.760 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 3, State INIT
+2025-05-08 02:46:37.770 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_9002670096] Session started
+2025-05-08 02:46:48.978 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:46:54.280 | WARNING | xarxes2025.client:_handle_state:72 - No session active yet.
+2025-05-08 02:47:15.365 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 02:47:15.367 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 02:47:15.369 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session XARXES_9278832820] TCP socket closed
+2025-05-08 02:47:15.372 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session XARXES_9278832820] UDP socket closed
+2025-05-08 02:47:15.373 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_9278832820] finished
+2025-05-08 02:47:17.374 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_9278832820] ClientHandler thread joined
+2025-05-08 02:47:17.376 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session XARXES_0338605619] TCP socket closed
+2025-05-08 02:47:17.376 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session XARXES_0338605619] UDP socket closed
+2025-05-08 02:47:17.376 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_0338605619] finished
+2025-05-08 02:47:19.377 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_0338605619] ClientHandler thread joined
+2025-05-08 02:47:19.379 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session XARXES_9002670096] TCP socket closed
+2025-05-08 02:47:19.379 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session XARXES_9002670096] UDP socket closed
+2025-05-08 02:47:19.381 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_9002670096] finished
+2025-05-08 02:47:21.389 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_9002670096] ClientHandler thread joined
+2025-05-08 02:47:21.390 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 03:07:02.571 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 03:07:02.575 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 03:07:05.828 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 03:07:05.831 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 03:07:09.681 | INFO | xarxes2025.client:_connect_rtsp_server:57 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 03:07:09.681 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 44976)
+2025-05-08 03:07:09.681 | INFO | xarxes2025.client:_setup_thread:100 - [Session pending] Sending SETUP
+2025-05-08 03:07:09.690 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 1, State INIT
+2025-05-08 03:07:09.834 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_5826584959] Session started
+2025-05-08 03:08:55.341 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 03:08:55.342 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 03:08:55.342 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session XARXES_5826584959] TCP socket closed
+2025-05-08 03:08:55.344 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session XARXES_5826584959] UDP socket closed
+2025-05-08 03:08:55.348 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_5826584959] finished
+2025-05-08 03:08:57.349 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_5826584959] ClientHandler thread joined
+2025-05-08 03:08:57.352 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 03:27:35.562 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 03:27:35.575 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 03:27:38.579 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 03:27:38.587 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 03:27:44.981 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 34634)
+2025-05-08 03:27:44.983 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 03:27:44.985 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 1, State INIT
+2025-05-08 03:27:45.000 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_2165805092] Session started
+2025-05-08 21:34:58.526 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 21:34:58.569 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 21:35:01.981 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 21:35:01.996 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 21:35:15.730 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 39766)
+2025-05-08 21:35:15.736 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 21:35:15.737 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:53 - [Session N/A] SETUP request, CSeq 1, State INIT
+2025-05-08 21:35:15.772 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_0559896367] Session started
+2025-05-08 21:35:23.626 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 21:35:23.626 | INFO | xarxes2025.client:_close_sockets:171 - TCP socket closed.
+2025-05-08 21:35:27.462 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 21:35:27.464 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 21:35:27.465 | INFO | xarxes2025.clienthandler:shutdown:151 - [Session XARXES_0559896367] TCP socket closed
+2025-05-08 21:35:27.465 | INFO | xarxes2025.clienthandler:shutdown:155 - [Session XARXES_0559896367] UDP socket closed
+2025-05-08 21:35:27.465 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_0559896367] finished
+2025-05-08 21:35:29.466 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_0559896367] ClientHandler thread joined
+2025-05-08 21:35:29.467 | INFO | xarxes2025.server:shutdown:53 - Server socket closed

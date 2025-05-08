@@ -1,0 +1,2 @@
+2025-05-07 16:38:05.003 | INFO | xarxes2025.client:ui_close_window:47 - Closing RTP client window.
+2025-05-07 16:38:05.020 | INFO | xarxes2025.client:_close_sockets:60 - TCP socket closed.
