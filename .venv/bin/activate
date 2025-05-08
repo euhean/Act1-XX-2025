@@ -45,7 +45,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=/home/euhean/Desktop/xarxes/Act1/xarxes2025-0.1.0/.venv
+VIRTUAL_ENV=/home/mrpudin/xarxes2025-0.1.0/.venv
 if ([ "$OSTYPE" = "cygwin" ] || [ "$OSTYPE" = "msys" ]) && $(command -v cygpath &> /dev/null) ; then
     VIRTUAL_ENV=$(cygpath -u "$VIRTUAL_ENV")
 fi
@@ -55,8 +55,8 @@ _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/"bin":$PATH"
 export PATH
 
-if [ "x"xarxes2025-py3.12 != x ] ; then
-    VIRTUAL_ENV_PROMPT=xarxes2025-py3.12
+if [ "x"xarxes2025-py3.13 != x ] ; then
+    VIRTUAL_ENV_PROMPT=xarxes2025-py3.13
 else
     VIRTUAL_ENV_PROMPT=$(basename "$VIRTUAL_ENV")
 fi

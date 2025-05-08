@@ -37,8 +37,8 @@ deactivate -nondestructive
 $VIRTUAL_ENV = $BASE_DIR
 $env:VIRTUAL_ENV = $VIRTUAL_ENV
 
-if ('xarxes2025-py3.12' -ne "") {
-    $env:VIRTUAL_ENV_PROMPT = 'xarxes2025-py3.12'
+if ('xarxes2025-py3.13' -ne "") {
+    $env:VIRTUAL_ENV_PROMPT = 'xarxes2025-py3.13'
 }
 else {
     $env:VIRTUAL_ENV_PROMPT = $( Split-Path $env:VIRTUAL_ENV -Leaf )

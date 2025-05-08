@@ -1292,3 +1292,513 @@
 2025-05-08 21:35:27.465 | INFO | xarxes2025.clienthandler:shutdown:159 - [Session XARXES_0559896367] finished
 2025-05-08 21:35:29.466 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_0559896367] ClientHandler thread joined
 2025-05-08 21:35:29.467 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 22:16:30.611 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:16:30.611 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:16:37.328 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:16:37.328 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:16:37.338 | ERROR | xarxes2025.client:_handle_response:157 - 400 Error: Empty Request
+2025-05-08 22:16:40.762 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:16:40.762 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:18:44.952 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 22:18:44.953 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 22:18:57.380 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:18:57.380 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:19:01.149 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:19:01.149 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 54736)
+2025-05-08 22:19:01.149 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:19:01.150 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 22:19:01.157 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:19:01.158 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_7862862091] Session started
+2025-05-08 22:19:01.158 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_7862862091] Transition: INIT -> READY
+2025-05-08 22:19:01.159 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_7862862091] Setup complete, state: READY
+2025-05-08 22:19:01.159 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: INIT -> READY
+2025-05-08 22:19:01.160 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] SETUP acknowledged. State: READY
+2025-05-08 22:19:04.144 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 22:19:06.995 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 1
+2025-05-08 22:19:06.996 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received PLAY request, CSeq 1, State READY
+2025-05-08 22:19:06.997 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:06.997 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:06.998 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] PLAY acknowledged. State: PLAYING
+2025-05-08 22:19:06.998 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_7862862091] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:19:06.998 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_7862862091] Started streaming thread
+2025-05-08 22:19:08.782 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:19:12.825 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 2
+2025-05-08 22:19:12.826 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received PAUSE request, CSeq 2, State PLAYING
+2025-05-08 22:19:12.826 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> READY
+2025-05-08 22:19:12.827 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> READY
+2025-05-08 22:19:12.827 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_7862862091] Streaming paused
+2025-05-08 22:19:12.827 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] PAUSE acknowledged. State: READY
+2025-05-08 22:19:12.851 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_7862862091] Streaming thread stopped
+2025-05-08 22:19:13.319 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:19:18.383 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 3
+2025-05-08 22:19:18.384 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received PLAY request, CSeq 3, State READY
+2025-05-08 22:19:18.384 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:18.385 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:18.385 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_7862862091] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:19:18.385 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] PLAY acknowledged. State: PLAYING
+2025-05-08 22:19:18.385 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_7862862091] Started streaming thread
+2025-05-08 22:19:20.248 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:19:22.646 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 4
+2025-05-08 22:19:22.647 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received PAUSE request, CSeq 4, State PLAYING
+2025-05-08 22:19:22.649 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> READY
+2025-05-08 22:19:22.649 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_7862862091] Streaming paused
+2025-05-08 22:19:22.649 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> READY
+2025-05-08 22:19:22.649 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] PAUSE acknowledged. State: READY
+2025-05-08 22:19:22.661 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:19:22.682 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_7862862091] Streaming thread stopped
+2025-05-08 22:19:25.538 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 5
+2025-05-08 22:19:25.539 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received PLAY request, CSeq 5, State READY
+2025-05-08 22:19:25.540 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:25.540 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: READY -> PLAYING
+2025-05-08 22:19:25.540 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] PLAY acknowledged. State: PLAYING
+2025-05-08 22:19:25.541 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_7862862091] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:19:25.541 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_7862862091] Started streaming thread
+2025-05-08 22:19:26.820 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:19:28.469 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 6
+2025-05-08 22:19:28.469 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7862862091] Received TEARDOWN request, CSeq 6, State PLAYING
+2025-05-08 22:19:28.470 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_7862862091] Session ended
+2025-05-08 22:19:28.470 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> INIT
+2025-05-08 22:19:28.470 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_7862862091] Teardown complete
+2025-05-08 22:19:28.470 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_7862862091] Session ended
+2025-05-08 22:19:28.471 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7862862091] Transition: PLAYING -> INIT
+2025-05-08 22:19:28.471 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_7862862091] TCP socket closed
+2025-05-08 22:19:28.471 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7862862091] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:19:28.471 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_7862862091] UDP socket closed
+2025-05-08 22:19:28.471 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_7862862091] Session finished
+2025-05-08 22:19:28.497 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_7862862091] Streaming thread stopped
+2025-05-08 22:19:28.962 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:19:29.961 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:19:29.962 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:19:33.091 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:19:33.092 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 7
+2025-05-08 22:19:33.097 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 44790)
+2025-05-08 22:19:33.104 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 7, State INIT
+2025-05-08 22:19:33.114 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:19:33.120 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_5446505680] Session started
+2025-05-08 22:19:33.133 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_5446505680] Transition: INIT -> READY
+2025-05-08 22:19:33.145 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_5446505680] Setup complete, state: READY
+2025-05-08 22:19:33.145 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: INIT -> READY
+2025-05-08 22:19:33.145 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] SETUP acknowledged. State: READY
+2025-05-08 22:19:34.828 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 22:19:36.333 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 7
+2025-05-08 22:19:36.340 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_5446505680] Received PLAY request, CSeq 7, State READY
+2025-05-08 22:19:36.346 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> PLAYING
+2025-05-08 22:19:36.353 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> PLAYING
+2025-05-08 22:19:36.353 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] PLAY acknowledged. State: PLAYING
+2025-05-08 22:19:36.359 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_5446505680] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:19:36.366 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_5446505680] Started streaming thread
+2025-05-08 22:19:38.029 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:19:40.094 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 8
+2025-05-08 22:19:40.100 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_5446505680] Received PAUSE request, CSeq 8, State PLAYING
+2025-05-08 22:19:40.100 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: PLAYING -> READY
+2025-05-08 22:19:40.106 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: PLAYING -> READY
+2025-05-08 22:19:40.106 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] PAUSE acknowledged. State: READY
+2025-05-08 22:19:40.112 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_5446505680] Streaming paused
+2025-05-08 22:19:40.118 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:19:40.132 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_5446505680] Streaming thread stopped
+2025-05-08 22:19:42.445 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 9
+2025-05-08 22:19:42.451 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_5446505680] Received PLAY request, CSeq 9, State READY
+2025-05-08 22:19:42.457 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> PLAYING
+2025-05-08 22:19:42.464 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> PLAYING
+2025-05-08 22:19:42.465 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] PLAY acknowledged. State: PLAYING
+2025-05-08 22:19:42.476 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_5446505680] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:19:42.483 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_5446505680] Started streaming thread
+2025-05-08 22:19:43.868 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:19:55.990 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 10
+2025-05-08 22:19:55.994 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_5446505680] Received PAUSE request, CSeq 10, State PLAYING
+2025-05-08 22:19:55.995 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: PLAYING -> READY
+2025-05-08 22:19:55.995 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: PLAYING -> READY
+2025-05-08 22:19:55.996 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] PAUSE acknowledged. State: READY
+2025-05-08 22:19:56.001 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_5446505680] Streaming paused
+2025-05-08 22:19:56.014 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:19:56.040 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_5446505680] Streaming thread stopped
+2025-05-08 22:20:00.176 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 11
+2025-05-08 22:20:00.184 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_5446505680] Received TEARDOWN request, CSeq 11, State READY
+2025-05-08 22:20:00.190 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_5446505680] Session ended
+2025-05-08 22:20:00.191 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> INIT
+2025-05-08 22:20:00.197 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_5446505680] Session ended
+2025-05-08 22:20:00.197 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_5446505680] Transition: READY -> INIT
+2025-05-08 22:20:00.198 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_5446505680] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:20:00.203 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_5446505680] Teardown complete
+2025-05-08 22:20:00.209 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_5446505680] TCP socket closed
+2025-05-08 22:20:00.209 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_5446505680] UDP socket closed
+2025-05-08 22:20:00.210 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_5446505680] Session finished
+2025-05-08 22:20:01.619 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:20:01.620 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:20:02.885 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:20:02.886 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 12
+2025-05-08 22:20:02.896 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 59894)
+2025-05-08 22:20:02.985 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 12, State INIT
+2025-05-08 22:20:03.008 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:20:03.014 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_8907964238] Session started
+2025-05-08 22:20:03.032 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_8907964238] Transition: INIT -> READY
+2025-05-08 22:20:03.038 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: INIT -> READY
+2025-05-08 22:20:03.039 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8907964238] SETUP acknowledged. State: READY
+2025-05-08 22:20:03.045 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_8907964238] Setup complete, state: READY
+2025-05-08 22:20:04.405 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 22:20:05.461 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 12
+2025-05-08 22:20:05.472 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_8907964238] Received PLAY request, CSeq 12, State READY
+2025-05-08 22:20:05.478 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: READY -> PLAYING
+2025-05-08 22:20:05.479 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: READY -> PLAYING
+2025-05-08 22:20:05.480 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8907964238] PLAY acknowledged. State: PLAYING
+2025-05-08 22:20:05.497 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_8907964238] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:20:05.503 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_8907964238] Started streaming thread
+2025-05-08 22:20:06.535 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:20:13.716 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 13
+2025-05-08 22:20:13.751 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_8907964238] Received PAUSE request, CSeq 13, State PLAYING
+2025-05-08 22:20:13.758 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: PLAYING -> READY
+2025-05-08 22:20:13.765 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: PLAYING -> READY
+2025-05-08 22:20:13.766 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8907964238] PAUSE acknowledged. State: READY
+2025-05-08 22:20:13.770 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_8907964238] Streaming paused
+2025-05-08 22:20:13.776 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:20:13.795 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_8907964238] Streaming thread stopped
+2025-05-08 22:20:16.212 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 14
+2025-05-08 22:20:16.262 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_8907964238] Received TEARDOWN request, CSeq 14, State READY
+2025-05-08 22:20:16.268 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_8907964238] Session ended
+2025-05-08 22:20:16.268 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: READY -> INIT
+2025-05-08 22:20:16.269 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_8907964238] Session ended
+2025-05-08 22:20:16.269 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8907964238] Transition: READY -> INIT
+2025-05-08 22:20:16.269 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8907964238] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:20:16.280 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_8907964238] Teardown complete
+2025-05-08 22:20:16.303 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_8907964238] TCP socket closed
+2025-05-08 22:20:16.345 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_8907964238] UDP socket closed
+2025-05-08 22:20:16.370 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_8907964238] Session finished
+2025-05-08 22:20:17.293 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:20:17.295 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:20:18.773 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 22:20:18.774 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 22:20:18.803 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_7862862091] Session finished
+2025-05-08 22:20:20.856 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_7862862091] ClientHandler thread joined
+2025-05-08 22:20:20.884 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_5446505680] Session finished
+2025-05-08 22:20:22.171 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:20:22.943 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_5446505680] ClientHandler thread joined
+2025-05-08 22:20:22.966 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_8907964238] Session finished
+2025-05-08 22:20:25.012 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_8907964238] ClientHandler thread joined
+2025-05-08 22:20:25.019 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 22:20:42.285 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 22:20:42.285 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 22:21:02.961 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:21:02.961 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:21:07.096 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:21:07.097 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:21:11.663 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:21:11.664 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 40838)
+2025-05-08 22:21:11.664 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:21:11.665 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 22:21:11.673 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:21:11.673 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_4230314285] Session started
+2025-05-08 22:21:11.674 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_4230314285] Transition: INIT -> READY
+2025-05-08 22:21:11.674 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_4230314285] Setup complete, state: READY
+2025-05-08 22:21:11.675 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_4230314285] Transition: INIT -> READY
+2025-05-08 22:21:11.675 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_4230314285] SETUP acknowledged. State: READY
+2025-05-08 22:21:13.165 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 22:21:15.030 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 1
+2025-05-08 22:21:15.031 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_4230314285] Received PLAY request, CSeq 1, State READY
+2025-05-08 22:21:15.031 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_4230314285] Transition: READY -> PLAYING
+2025-05-08 22:21:15.032 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_4230314285] Transition: READY -> PLAYING
+2025-05-08 22:21:15.033 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_4230314285] PLAY acknowledged. State: PLAYING
+2025-05-08 22:21:15.033 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_4230314285] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:21:15.034 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_4230314285] Started streaming thread
+2025-05-08 22:21:16.176 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:21:17.142 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:21:17.143 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 49942)
+2025-05-08 22:21:17.143 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:21:17.145 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 22:21:17.149 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:21:17.150 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_2998948014] Session started
+2025-05-08 22:21:17.150 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_2998948014] Transition: INIT -> READY
+2025-05-08 22:21:17.150 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_2998948014] Setup complete, state: READY
+2025-05-08 22:21:17.150 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_2998948014] Transition: INIT -> READY
+2025-05-08 22:21:17.151 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_2998948014] SETUP acknowledged. State: READY
+2025-05-08 22:21:18.366 | ERROR | xarxes2025.client:_setup_udp_socket:72 - Couldn't set up UDP socket: [Errno 98] Address already in use
+2025-05-08 22:21:18.369 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:21:18.369 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:21:18.369 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:42 - [Session XARXES_2998948014] Client disconnected
+2025-05-08 22:21:18.371 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_2998948014] TCP socket closed
+2025-05-08 22:21:18.372 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_2998948014] UDP socket closed
+2025-05-08 22:21:18.373 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_2998948014] Session finished
+2025-05-08 22:21:45.999 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 4
+2025-05-08 22:21:47.835 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 4
+2025-05-08 22:21:50.994 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:21:50.994 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 4
+2025-05-08 22:21:53.005 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:21:53.006 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 4
+2025-05-08 22:21:59.078 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 2
+2025-05-08 22:21:59.085 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_4230314285] Received TEARDOWN request, CSeq 2, State PLAYING
+2025-05-08 22:21:59.097 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_4230314285] Session ended
+2025-05-08 22:21:59.103 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_4230314285] Transition: PLAYING -> INIT
+2025-05-08 22:21:59.115 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_4230314285] Session ended
+2025-05-08 22:21:59.115 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_4230314285] Transition: PLAYING -> INIT
+2025-05-08 22:21:59.115 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_4230314285] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:21:59.120 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_4230314285] Teardown complete
+2025-05-08 22:21:59.138 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_4230314285] TCP socket closed
+2025-05-08 22:21:59.139 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_4230314285] UDP socket closed
+2025-05-08 22:21:59.143 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:21:59.139 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_4230314285] Session finished
+2025-05-08 22:21:59.174 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_4230314285] Streaming thread stopped
+2025-05-08 22:22:00.181 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:22:00.182 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:22:01.080 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:22:03.640 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 22:22:03.647 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 22:22:03.665 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_4230314285] Session finished
+2025-05-08 22:22:05.675 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_4230314285] ClientHandler thread joined
+2025-05-08 22:22:05.676 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_2998948014] Session finished
+2025-05-08 22:22:07.702 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_2998948014] ClientHandler thread joined
+2025-05-08 22:22:07.749 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 22:22:36.227 | INFO | xarxes2025.cli:server:103 - Server xarxes 2025 video streaming
+2025-05-08 22:22:36.227 | INFO | xarxes2025.server:initialize_socket:21 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 22:22:38.512 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:22:38.513 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:22:55.767 | INFO | xarxes2025.cli:client:149 - Client xarxes 2025 video streaming
+2025-05-08 22:22:55.767 | INFO | xarxes2025.client:__init__:24 - Initializing RTP Client...
+2025-05-08 22:22:59.826 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:22:59.826 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 58300)
+2025-05-08 22:22:59.826 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:22:59.827 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 22:22:59.832 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 22:22:59.833 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_8796042011] Session started
+2025-05-08 22:22:59.833 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_8796042011] Transition: INIT -> READY
+2025-05-08 22:22:59.834 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_8796042011] Setup complete, state: READY
+2025-05-08 22:22:59.834 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8796042011] Transition: INIT -> READY
+2025-05-08 22:22:59.834 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8796042011] SETUP acknowledged. State: READY
+2025-05-08 22:23:01.432 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 22:23:02.197 | INFO | xarxes2025.server:run:31 - Accepted connection from ('127.0.0.1', 58310)
+2025-05-08 22:23:02.197 | INFO | xarxes2025.client:_connect_rtsp_server:58 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 22:23:02.197 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending SETUP request, CSeq 1
+2025-05-08 22:23:02.198 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 22:23:02.202 | INFO | xarxes2025.clienthandler:_handle_setup:106 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25001)
+2025-05-08 22:23:02.202 | INFO | xarxes2025.session:_start_session:20 - [Session XARXES_7936171512] Session started
+2025-05-08 22:23:02.202 | INFO | xarxes2025.session:_start_session:22 - [Session XARXES_7936171512] Transition: INIT -> READY
+2025-05-08 22:23:02.203 | INFO | xarxes2025.clienthandler:_handle_setup:114 - [Session XARXES_7936171512] Setup complete, state: READY
+2025-05-08 22:23:02.203 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: INIT -> READY
+2025-05-08 22:23:02.203 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7936171512] SETUP acknowledged. State: READY
+2025-05-08 22:23:03.189 | INFO | xarxes2025.client:_setup_udp_socket:70 - UDP socket bound to 127.0.0.1:25001
+2025-05-08 22:23:04.302 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 1
+2025-05-08 22:23:04.303 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_8796042011] Received PLAY request, CSeq 1, State READY
+2025-05-08 22:23:04.304 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8796042011] Transition: READY -> PLAYING
+2025-05-08 22:23:04.304 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8796042011] Transition: READY -> PLAYING
+2025-05-08 22:23:04.305 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_8796042011] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 22:23:04.305 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8796042011] PLAY acknowledged. State: PLAYING
+2025-05-08 22:23:04.306 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_8796042011] Started streaming thread
+2025-05-08 22:23:05.529 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:23:06.288 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PLAY request, CSeq 1
+2025-05-08 22:23:06.289 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7936171512] Received PLAY request, CSeq 1, State READY
+2025-05-08 22:23:06.290 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: READY -> PLAYING
+2025-05-08 22:23:06.290 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: READY -> PLAYING
+2025-05-08 22:23:06.290 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7936171512] PLAY acknowledged. State: PLAYING
+2025-05-08 22:23:06.290 | INFO | xarxes2025.clienthandler:_stream_frames:151 - [Session XARXES_7936171512] Starting to stream frames to ('127.0.0.1', 25001)
+2025-05-08 22:23:06.291 | INFO | xarxes2025.clienthandler:_handle_play:127 - [Session XARXES_7936171512] Started streaming thread
+2025-05-08 22:23:07.254 | INFO | xarxes2025.client:_receive_frame_thread:173 - Started receiving frames thread.
+2025-05-08 22:23:13.796 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending PAUSE request, CSeq 2
+2025-05-08 22:23:13.797 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7936171512] Received PAUSE request, CSeq 2, State PLAYING
+2025-05-08 22:23:13.797 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: PLAYING -> READY
+2025-05-08 22:23:13.798 | INFO | xarxes2025.clienthandler:_handle_pause:137 - [Session XARXES_7936171512] Streaming paused
+2025-05-08 22:23:13.798 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: PLAYING -> READY
+2025-05-08 22:23:13.798 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7936171512] PAUSE acknowledged. State: READY
+2025-05-08 22:23:13.813 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_7936171512] Streaming thread stopped
+2025-05-08 22:23:14.281 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:23:16.257 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 3
+2025-05-08 22:23:16.258 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_7936171512] Received TEARDOWN request, CSeq 3, State READY
+2025-05-08 22:23:16.258 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_7936171512] Session ended
+2025-05-08 22:23:16.259 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: READY -> INIT
+2025-05-08 22:23:16.259 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_7936171512] Teardown complete
+2025-05-08 22:23:16.259 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_7936171512] Session ended
+2025-05-08 22:23:16.259 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_7936171512] TCP socket closed
+2025-05-08 22:23:16.260 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_7936171512] Transition: READY -> INIT
+2025-05-08 22:23:16.260 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_7936171512] UDP socket closed
+2025-05-08 22:23:16.260 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_7936171512] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:23:16.260 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_7936171512] Session finished
+2025-05-08 22:23:18.124 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:23:18.125 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:23:19.446 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:23:21.520 | INFO | xarxes2025.client:_send_rtsp_request:133 - Sending TEARDOWN request, CSeq 2
+2025-05-08 22:23:21.526 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:60 - [Session XARXES_8796042011] Received TEARDOWN request, CSeq 2, State PLAYING
+2025-05-08 22:23:21.527 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_8796042011] Session ended
+2025-05-08 22:23:21.540 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8796042011] Transition: PLAYING -> INIT
+2025-05-08 22:23:21.546 | INFO | xarxes2025.session:_transition_state:36 - [Session XARXES_8796042011] Session ended
+2025-05-08 22:23:21.546 | INFO | xarxes2025.session:_transition_state:41 - [Session XARXES_8796042011] Transition: PLAYING -> INIT
+2025-05-08 22:23:21.546 | INFO | xarxes2025.client:_handle_response:165 - [Session XARXES_8796042011] TEARDOWN acknowledged. State: INIT
+2025-05-08 22:23:21.546 | INFO | xarxes2025.clienthandler:_handle_teardown:147 - [Session XARXES_8796042011] Teardown complete
+2025-05-08 22:23:21.534 | INFO | xarxes2025.clienthandler:_stream_frames:176 - [Session XARXES_8796042011] Streaming thread stopped
+2025-05-08 22:23:21.559 | INFO | xarxes2025.clienthandler:shutdown:185 - [Session XARXES_8796042011] TCP socket closed
+2025-05-08 22:23:21.571 | INFO | xarxes2025.clienthandler:shutdown:189 - [Session XARXES_8796042011] UDP socket closed
+2025-05-08 22:23:21.577 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_8796042011] Session finished
+2025-05-08 22:23:21.993 | INFO | xarxes2025.client:_receive_frame_thread:185 - Frame receiving thread terminated.
+2025-05-08 22:23:22.565 | INFO | xarxes2025.client:_close_sockets:199 - UDP socket closed.
+2025-05-08 22:23:22.566 | INFO | xarxes2025.client:_close_sockets:203 - TCP socket closed.
+2025-05-08 22:23:23.544 | INFO | xarxes2025.client:ui_close_window:45 - Closing RTP client window.
+2025-05-08 22:23:30.123 | INFO | xarxes2025.server:run:36 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 22:23:30.183 | INFO | xarxes2025.server:shutdown:44 - Shutting down all client threads...
+2025-05-08 22:23:30.195 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_8796042011] Session finished
+2025-05-08 22:23:32.273 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_8796042011] ClientHandler thread joined
+2025-05-08 22:23:32.308 | INFO | xarxes2025.clienthandler:shutdown:193 - [Session XARXES_7936171512] Session finished
+2025-05-08 22:23:34.311 | INFO | xarxes2025.server:shutdown:49 - [Session XARXES_7936171512] ClientHandler thread joined
+2025-05-08 22:23:34.353 | INFO | xarxes2025.server:shutdown:53 - Server socket closed
+2025-05-08 23:07:04.142 | INFO | xarxes2025.cli:server:108 - Server xarxes 2025 video streaming
+2025-05-08 23:07:04.143 | INFO | xarxes2025.server:initialize_socket:54 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 23:07:08.045 | INFO | xarxes2025.cli:client:154 - Client xarxes 2025 video streaming
+2025-05-08 23:07:08.045 | INFO | xarxes2025.client:__init__:47 - Initializing RTP Client...
+2025-05-08 23:07:13.148 | INFO | xarxes2025.cli:client:154 - Client xarxes 2025 video streaming
+2025-05-08 23:07:13.149 | INFO | xarxes2025.client:__init__:47 - Initializing RTP Client...
+2025-05-08 23:07:17.070 | INFO | xarxes2025.client:_update_status:94 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 23:07:17.070 | INFO | xarxes2025.server:run:78 - Accepted connection from ('127.0.0.1', 40288)
+2025-05-08 23:07:17.070 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending SETUP request, CSeq 1
+2025-05-08 23:07:17.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 23:07:17.077 | INFO | xarxes2025.clienthandler:_handle_setup:199 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25001)
+2025-05-08 23:07:17.077 | INFO | xarxes2025.session:_start_session:52 - [Session XARXES_8184427523] Session started
+2025-05-08 23:07:17.078 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: INIT -> READY
+2025-05-08 23:07:17.078 | INFO | xarxes2025.clienthandler:_handle_setup:214 - [Session XARXES_8184427523] Setup complete, state: READY
+2025-05-08 23:07:17.079 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: INIT -> READY
+2025-05-08 23:07:17.079 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_8184427523: READY
+2025-05-08 23:07:17.080 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_8184427523] SETUP acknowledged. State: READY
+2025-05-08 23:07:17.080 | INFO | xarxes2025.client:_setup_udp_socket:128 - UDP socket bound to 127.0.0.1:25001
+2025-05-08 23:07:42.348 | INFO | xarxes2025.server:run:78 - Accepted connection from ('127.0.0.1', 55452)
+2025-05-08 23:07:42.348 | INFO | xarxes2025.client:_update_status:94 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 23:07:42.349 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending SETUP request, CSeq 1
+2025-05-08 23:07:42.349 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 23:07:42.355 | INFO | xarxes2025.clienthandler:_handle_setup:199 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 23:07:42.355 | INFO | xarxes2025.session:_start_session:52 - [Session XARXES_7244683740] Session started
+2025-05-08 23:07:42.356 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: INIT -> READY
+2025-05-08 23:07:42.357 | INFO | xarxes2025.clienthandler:_handle_setup:214 - [Session XARXES_7244683740] Setup complete, state: READY
+2025-05-08 23:07:42.358 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: INIT -> READY
+2025-05-08 23:07:42.359 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7244683740: READY
+2025-05-08 23:07:42.359 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7244683740] SETUP acknowledged. State: READY
+2025-05-08 23:07:42.360 | INFO | xarxes2025.client:_setup_udp_socket:128 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 23:07:50.445 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PLAY request, CSeq 2
+2025-05-08 23:07:50.446 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7244683740] Received PLAY request, CSeq 2, State READY
+2025-05-08 23:07:50.446 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: READY -> PLAYING
+2025-05-08 23:07:50.447 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: READY -> PLAYING
+2025-05-08 23:07:50.448 | INFO | xarxes2025.clienthandler:_stream_frames:283 - [Session XARXES_7244683740] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 23:07:50.447 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7244683740: PLAYING
+2025-05-08 23:07:50.448 | INFO | xarxes2025.clienthandler:_handle_play:238 - [Session XARXES_7244683740] Started streaming thread
+2025-05-08 23:07:50.448 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7244683740] PLAY acknowledged. State: PLAYING
+2025-05-08 23:07:50.449 | INFO | xarxes2025.client:_receive_frame_thread:268 - Started receiving frames thread.
+2025-05-08 23:08:00.087 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PAUSE request, CSeq 3
+2025-05-08 23:08:00.088 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7244683740] Received PAUSE request, CSeq 3, State PLAYING
+2025-05-08 23:08:00.088 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: PLAYING -> READY
+2025-05-08 23:08:00.089 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: PLAYING -> READY
+2025-05-08 23:08:00.089 | INFO | xarxes2025.clienthandler:_handle_pause:256 - [Session XARXES_7244683740] Streaming paused
+2025-05-08 23:08:00.090 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7244683740: READY
+2025-05-08 23:08:00.090 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7244683740] PAUSE acknowledged. State: READY
+2025-05-08 23:08:00.090 | INFO | xarxes2025.client:_report_statistics:193 - Playback statistics: 285 frames in 9.64s (29.56 fps)
+2025-05-08 23:08:00.090 | INFO | xarxes2025.client:_update_status:94 - Paused. Stats: 29.56 fps
+2025-05-08 23:08:00.092 | INFO | xarxes2025.client:_receive_frame_thread:318 - Frame receiving thread terminated.
+2025-05-08 23:08:01.541 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PLAY request, CSeq 2
+2025-05-08 23:08:01.542 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_8184427523] Received PLAY request, CSeq 2, State READY
+2025-05-08 23:08:01.542 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: READY -> PLAYING
+2025-05-08 23:08:01.544 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: READY -> PLAYING
+2025-05-08 23:08:01.544 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_8184427523: PLAYING
+2025-05-08 23:08:01.544 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_8184427523] PLAY acknowledged. State: PLAYING
+2025-05-08 23:08:01.544 | INFO | xarxes2025.clienthandler:_stream_frames:283 - [Session XARXES_8184427523] Starting to stream frames to ('127.0.0.1', 25001)
+2025-05-08 23:08:01.545 | INFO | xarxes2025.clienthandler:_handle_play:238 - [Session XARXES_8184427523] Started streaming thread
+2025-05-08 23:08:01.545 | INFO | xarxes2025.client:_receive_frame_thread:268 - Started receiving frames thread.
+2025-05-08 23:08:03.148 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PAUSE request, CSeq 3
+2025-05-08 23:08:03.150 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_8184427523] Received PAUSE request, CSeq 3, State PLAYING
+2025-05-08 23:08:03.151 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: PLAYING -> READY
+2025-05-08 23:08:03.151 | INFO | xarxes2025.clienthandler:_handle_pause:256 - [Session XARXES_8184427523] Streaming paused
+2025-05-08 23:08:03.152 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: PLAYING -> READY
+2025-05-08 23:08:03.152 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_8184427523: READY
+2025-05-08 23:08:03.152 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_8184427523] PAUSE acknowledged. State: READY
+2025-05-08 23:08:03.153 | INFO | xarxes2025.client:_report_statistics:193 - Playback statistics: 44 frames in 1.61s (27.36 fps)
+2025-05-08 23:08:03.153 | INFO | xarxes2025.client:_update_status:94 - Paused. Stats: 27.36 fps
+2025-05-08 23:08:03.154 | INFO | xarxes2025.client:_receive_frame_thread:318 - Frame receiving thread terminated.
+2025-05-08 23:08:03.733 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending TEARDOWN request, CSeq 4
+2025-05-08 23:08:03.734 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_8184427523] Received TEARDOWN request, CSeq 4, State READY
+2025-05-08 23:08:03.735 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: READY -> INIT
+2025-05-08 23:08:03.735 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_8184427523] Session ended
+2025-05-08 23:08:03.735 | INFO | xarxes2025.clienthandler:_handle_teardown:273 - [Session XARXES_8184427523] Teardown complete
+2025-05-08 23:08:03.735 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_8184427523] Transition: READY -> INIT
+2025-05-08 23:08:03.735 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_8184427523] Session ended
+2025-05-08 23:08:03.735 | INFO | xarxes2025.clienthandler:_close_sockets:376 - [Session XARXES_8184427523] TCP socket closed
+2025-05-08 23:08:03.736 | INFO | xarxes2025.clienthandler:_close_sockets:382 - [Session XARXES_8184427523] UDP socket closed
+2025-05-08 23:08:03.736 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_8184427523: INIT
+2025-05-08 23:08:03.737 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_8184427523] TEARDOWN acknowledged. State: INIT
+2025-05-08 23:08:03.737 | INFO | xarxes2025.client:_update_status:94 - Session closed
+2025-05-08 23:08:03.737 | INFO | xarxes2025.client:_close_sockets:365 - UDP socket closed.
+2025-05-08 23:08:03.738 | INFO | xarxes2025.client:_close_sockets:369 - TCP socket closed.
+2025-05-08 23:08:03.736 | INFO | xarxes2025.clienthandler:_stream_frames:345 - [Session XARXES_8184427523] Streaming thread stopped
+2025-05-08 23:08:03.743 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_8184427523] Session finished
+2025-05-08 23:08:03.743 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_8184427523] Session finished
+2025-05-08 23:08:04.685 | INFO | xarxes2025.client:ui_close_window:83 - Closing RTP client window.
+2025-05-08 23:08:07.464 | INFO | xarxes2025.client:ui_close_window:83 - Closing RTP client window.
+2025-05-08 23:08:07.464 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending TEARDOWN request, CSeq 4
+2025-05-08 23:08:07.465 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7244683740] Received TEARDOWN request, CSeq 4, State READY
+2025-05-08 23:08:07.465 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: READY -> INIT
+2025-05-08 23:08:07.465 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_7244683740] Session ended
+2025-05-08 23:08:07.465 | INFO | xarxes2025.clienthandler:_handle_teardown:273 - [Session XARXES_7244683740] Teardown complete
+2025-05-08 23:08:07.466 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7244683740] Transition: READY -> INIT
+2025-05-08 23:08:07.466 | INFO | xarxes2025.clienthandler:_close_sockets:376 - [Session XARXES_7244683740] TCP socket closed
+2025-05-08 23:08:07.466 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_7244683740] Session ended
+2025-05-08 23:08:07.466 | INFO | xarxes2025.clienthandler:_close_sockets:382 - [Session XARXES_7244683740] UDP socket closed
+2025-05-08 23:08:07.466 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7244683740: INIT
+2025-05-08 23:08:07.467 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7244683740] TEARDOWN acknowledged. State: INIT
+2025-05-08 23:08:07.467 | INFO | xarxes2025.client:_update_status:94 - Session closed
+2025-05-08 23:08:07.467 | INFO | xarxes2025.client:_close_sockets:365 - UDP socket closed.
+2025-05-08 23:08:07.468 | INFO | xarxes2025.client:_close_sockets:369 - TCP socket closed.
+2025-05-08 23:08:07.466 | INFO | xarxes2025.clienthandler:_stream_frames:345 - [Session XARXES_7244683740] Streaming thread stopped
+2025-05-08 23:08:07.471 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_7244683740] Session finished
+2025-05-08 23:08:07.471 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_7244683740] Session finished
+2025-05-08 23:08:10.579 | INFO | xarxes2025.server:run:89 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 23:08:10.580 | INFO | xarxes2025.server:shutdown:120 - Shutting down server...
+2025-05-08 23:08:10.580 | INFO | xarxes2025.server:shutdown:128 - Server socket closed
+2025-05-08 23:08:10.580 | INFO | xarxes2025.server:shutdown:131 - Shutting down all client threads...
+2025-05-08 23:08:11.581 | INFO | xarxes2025.server:shutdown:147 - Server shutdown complete
+2025-05-08 23:13:00.579 | INFO | xarxes2025.cli:server:108 - Server xarxes 2025 video streaming
+2025-05-08 23:13:00.580 | INFO | xarxes2025.server:initialize_socket:54 - RTSP server listening on 127.0.0.1:4321
+2025-05-08 23:13:03.002 | INFO | xarxes2025.cli:client:154 - Client xarxes 2025 video streaming
+2025-05-08 23:13:03.002 | INFO | xarxes2025.client:__init__:47 - Initializing RTP Client...
+2025-05-08 23:13:06.670 | INFO | xarxes2025.server:run:78 - Accepted connection from ('127.0.0.1', 51944)
+2025-05-08 23:13:06.670 | INFO | xarxes2025.client:_update_status:94 - Connected to RTSP server at 127.0.0.1:4321
+2025-05-08 23:13:06.671 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending SETUP request, CSeq 1
+2025-05-08 23:13:06.671 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session N/A] Received SETUP request, CSeq 1, State INIT
+2025-05-08 23:13:06.678 | INFO | xarxes2025.clienthandler:_handle_setup:199 - [Session N/A] Client UDP endpoint: ('127.0.0.1', 25000)
+2025-05-08 23:13:06.679 | INFO | xarxes2025.session:_start_session:52 - [Session XARXES_7184234205] Session started
+2025-05-08 23:13:06.679 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: INIT -> READY
+2025-05-08 23:13:06.679 | INFO | xarxes2025.clienthandler:_handle_setup:214 - [Session XARXES_7184234205] Setup complete, state: READY
+2025-05-08 23:13:06.680 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: INIT -> READY
+2025-05-08 23:13:06.681 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7184234205: READY
+2025-05-08 23:13:06.682 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7184234205] SETUP acknowledged. State: READY
+2025-05-08 23:13:06.682 | INFO | xarxes2025.client:_setup_udp_socket:128 - UDP socket bound to 127.0.0.1:25000
+2025-05-08 23:13:08.403 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PLAY request, CSeq 2
+2025-05-08 23:13:08.404 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7184234205] Received PLAY request, CSeq 2, State READY
+2025-05-08 23:13:08.404 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: READY -> PLAYING
+2025-05-08 23:13:08.405 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: READY -> PLAYING
+2025-05-08 23:13:08.405 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7184234205: PLAYING
+2025-05-08 23:13:08.406 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7184234205] PLAY acknowledged. State: PLAYING
+2025-05-08 23:13:08.405 | INFO | xarxes2025.clienthandler:_stream_frames:283 - [Session XARXES_7184234205] Starting to stream frames to ('127.0.0.1', 25000)
+2025-05-08 23:13:08.406 | INFO | xarxes2025.clienthandler:_handle_play:238 - [Session XARXES_7184234205] Started streaming thread
+2025-05-08 23:13:08.406 | INFO | xarxes2025.client:_receive_frame_thread:268 - Started receiving frames thread.
+2025-05-08 23:13:10.563 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending PAUSE request, CSeq 3
+2025-05-08 23:13:10.564 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7184234205] Received PAUSE request, CSeq 3, State PLAYING
+2025-05-08 23:13:10.565 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: PLAYING -> READY
+2025-05-08 23:13:10.565 | INFO | xarxes2025.clienthandler:_handle_pause:256 - [Session XARXES_7184234205] Streaming paused
+2025-05-08 23:13:10.565 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: PLAYING -> READY
+2025-05-08 23:13:10.566 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7184234205: READY
+2025-05-08 23:13:10.566 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7184234205] PAUSE acknowledged. State: READY
+2025-05-08 23:13:10.566 | INFO | xarxes2025.client:_report_statistics:193 - Playback statistics: 61 frames in 2.16s (28.23 fps)
+2025-05-08 23:13:10.567 | INFO | xarxes2025.client:_update_status:94 - Paused. Stats: 28.23 fps
+2025-05-08 23:13:11.045 | INFO | xarxes2025.client:_receive_frame_thread:318 - Frame receiving thread terminated.
+2025-05-08 23:13:11.071 | INFO | xarxes2025.client:_send_rtsp_request:212 - Sending TEARDOWN request, CSeq 4
+2025-05-08 23:13:11.071 | INFO | xarxes2025.clienthandler:_listen_rtsp_request:130 - [Session XARXES_7184234205] Received TEARDOWN request, CSeq 4, State READY
+2025-05-08 23:13:11.072 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: READY -> INIT
+2025-05-08 23:13:11.072 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_7184234205] Session ended
+2025-05-08 23:13:11.072 | INFO | xarxes2025.clienthandler:_handle_teardown:273 - [Session XARXES_7184234205] Teardown complete
+2025-05-08 23:13:11.072 | INFO | xarxes2025.session:_transition_to_state:91 - [Session XARXES_7184234205] Transition: READY -> INIT
+2025-05-08 23:13:11.073 | INFO | xarxes2025.clienthandler:_stream_frames:345 - [Session XARXES_7184234205] Streaming thread stopped
+2025-05-08 23:13:11.073 | INFO | xarxes2025.session:_transition_state:70 - [Session XARXES_7184234205] Session ended
+2025-05-08 23:13:11.073 | INFO | xarxes2025.client:_update_status:94 - Session XARXES_7184234205: INIT
+2025-05-08 23:13:11.074 | INFO | xarxes2025.client:_handle_response:263 - [Session XARXES_7184234205] TEARDOWN acknowledged. State: INIT
+2025-05-08 23:13:11.074 | INFO | xarxes2025.client:_update_status:94 - Session closed
+2025-05-08 23:13:11.074 | INFO | xarxes2025.client:_close_sockets:367 - UDP socket closed.
+2025-05-08 23:13:11.073 | INFO | xarxes2025.clienthandler:_close_sockets:376 - [Session XARXES_7184234205] TCP socket closed
+2025-05-08 23:13:11.075 | INFO | xarxes2025.clienthandler:_close_sockets:382 - [Session XARXES_7184234205] UDP socket closed
+2025-05-08 23:13:11.075 | INFO | xarxes2025.client:_close_sockets:371 - TCP socket closed.
+2025-05-08 23:13:11.080 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_7184234205] Session finished
+2025-05-08 23:13:11.081 | INFO | xarxes2025.clienthandler:shutdown:369 - [Session XARXES_7184234205] Session finished
+2025-05-08 23:13:11.846 | INFO | xarxes2025.client:ui_close_window:83 - Closing RTP client window.
+2025-05-08 23:13:13.064 | INFO | xarxes2025.server:run:89 - Server shutdown requested via KeyboardInterrupt
+2025-05-08 23:13:13.064 | INFO | xarxes2025.server:shutdown:120 - Shutting down server...
+2025-05-08 23:13:13.065 | INFO | xarxes2025.server:shutdown:128 - Server socket closed
+2025-05-08 23:13:13.065 | INFO | xarxes2025.server:shutdown:131 - Shutting down all client threads...
+2025-05-08 23:13:14.066 | INFO | xarxes2025.server:shutdown:147 - Server shutdown complete

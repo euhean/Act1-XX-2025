@@ -58,7 +58,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /home/euhean/Desktop/xarxes/Act1/xarxes2025-0.1.0/.venv
+set -gx VIRTUAL_ENV /home/mrpudin/xarxes2025-0.1.0/.venv
 
 # https://github.com/fish-shell/fish-shell/issues/436 altered PATH handling
 if test (echo $FISH_VERSION | head -c 1) -lt 3
@@ -70,8 +70,8 @@ set -gx PATH "$VIRTUAL_ENV"'/'bin $PATH
 
 # Prompt override provided?
 # If not, just use the environment name.
-if test -n xarxes2025-py3.12
-    set -gx VIRTUAL_ENV_PROMPT xarxes2025-py3.12
+if test -n xarxes2025-py3.13
+    set -gx VIRTUAL_ENV_PROMPT xarxes2025-py3.13
 else
     set -gx VIRTUAL_ENV_PROMPT (basename "$VIRTUAL_ENV")
 end

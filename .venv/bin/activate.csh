@@ -10,15 +10,15 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/euhean/Desktop/xarxes/Act1/xarxes2025-0.1.0/.venv
+setenv VIRTUAL_ENV /home/mrpudin/xarxes2025-0.1.0/.venv
 
 set _OLD_VIRTUAL_PATH="$PATH:q"
 setenv PATH "$VIRTUAL_ENV:q/"bin":$PATH:q"
 
 
 
-if (xarxes2025-py3.12 != "") then
-    setenv VIRTUAL_ENV_PROMPT xarxes2025-py3.12
+if (xarxes2025-py3.13 != "") then
+    setenv VIRTUAL_ENV_PROMPT xarxes2025-py3.13
 else
     setenv VIRTUAL_ENV_PROMPT "$VIRTUAL_ENV:t:q"
 endif

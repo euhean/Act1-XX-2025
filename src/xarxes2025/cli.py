@@ -10,11 +10,11 @@ import os
 
 @click.group()
 @click.version_option()
-@click.option('--debug/--no-debug', default=False,show_default=True)
-@click.option('--debug-level', default='INFO',show_default=True,
+@click.option('--debug/--no-debug', default=False, show_default=True)
+@click.option('--debug-level', default='INFO', show_default=True,
               type=click.Choice(['TRACE', 'DEBUG', 'INFO', 'WARNING', 'ERROR'], case_sensitive=False))
-@click.option('--debug-file/--no-debug-file', default=False,show_default=True)
-@click.option('--debug-filename', type=click.Path(),show_default=True, default="xarxes.log")
+@click.option('--debug-file/--no-debug-file', default=False, show_default=True)
+@click.option('--debug-filename', type=click.Path(), show_default=True, default="xarxes.log")
 @click.pass_context
 def cli(ctx, debug, debug_level, debug_file, debug_filename):
     """
@@ -35,13 +35,18 @@ def cli(ctx, debug, debug_level, debug_file, debug_filename):
     ctx.obj['DEBUG_LEVEL'] = debug_level
     ctx.obj['DEBUG_FILE'] = debug_file
 
+    # Create logs directory if it doesn't exist
     LOG_DIR = "logs"
     os.makedirs(LOG_DIR, exist_ok=True)
     
+    # Configure log format
     fmt = "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>"
 
+    # Remove default logger and add console logger
     logger.remove()
     logger.add(sys.stderr, level=debug_level if debug else "ERROR", colorize=True, format=fmt)
+    
+    # Add file logger
     logger.add(f"{LOG_DIR}/xarxes.log", level=debug_level, rotation="500 KB", backtrace=True, diagnose=True, format=fmt)
 
     logger.debug(f"Debug mode is {'on' if debug else 'off'}")

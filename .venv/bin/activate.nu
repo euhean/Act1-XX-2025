@@ -32,7 +32,7 @@ export-env {
       }
     }
 
-    let virtual_env = r#'/home/euhean/Desktop/xarxes/Act1/xarxes2025-0.1.0/.venv'#
+    let virtual_env = r#'/home/mrpudin/xarxes2025-0.1.0/.venv'#
     let bin = r#'bin'#
 
     let is_windows = ($nu.os-info.family) == 'windows'
@@ -47,10 +47,10 @@ export-env {
     let new_path = ($env | get $path_name | prepend $venv_path)
 
     # If there is no default prompt, then use the env name instead
-    let virtual_env_prompt = (if (r#'xarxes2025-py3.12'# | is-empty) {
+    let virtual_env_prompt = (if (r#'xarxes2025-py3.13'# | is-empty) {
         ($virtual_env | path basename)
     } else {
-        r#'xarxes2025-py3.12'#
+        r#'xarxes2025-py3.13'#
     })
 
     let new_env = {
